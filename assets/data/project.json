@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Personal Portfolio",
+    "description": "Created a responsive personal website to display web development projects and skills.\nBuilt with HTML, CSS, Bootstrap,TypeScript and Angular.\nIt includes sections for projects, skills, and contact details,\nshowcasing technical expertise and professional accomplishments.",
+    "image_url": "assets/projects/portfolio.png",
+    "tech": [
+      "Html",
+      "Css",
+      "Angular",
+      "TypeScript",
+      "Bootstrap",
+      "GitHub",
+      "Git"
+    ],
+    "demo": ""
+  },
+  {
+    "title": "DUAT",
+    "description": "Developed a mobile application using Flutter that assists tourists in exploring Egypt,\nIntegrated AI and third-party APIs functionalities to personalize travel recommendations, significantly\nenhancing user engagement and providing real-time information",
+    "image_url": "assets/projects/daut.jpg",
+    "tech": ["Flutter", "Dart", "Firebase", "Google Maps", "Api", "Ai"],
+    "demo": ""
+  },
+  {
+    "title": " 3D Skull Landmark Detection Using DICOM Files",
+    "description": "Built a custom dataset of 3D skull X-rays with\nannotated coordinates for 29 key anatomical landmarks in each\nDICOM file. Developed a lightweight 3D CNN\nmodel using TensorFlow and Keras to predict these landmarks. ",
+    "image_url": "assets/projects/3D skull.jpg",
+    "tech": ["Python", "TensorFlow", "Keras", "NumPy", "Pydicom", "Skimage"],
+    "demo": ""
+  },
+  {
+    "title": "Healthy Web Application",
+    "description": "Designed and developed an interactive and user-friendly web platform for Gazar Foods, The application allows customers to personalize their meal plans, manage user profiles, and efficiently track orders in real-time, enhancing the overall customer experience and operational efficiency",
+    "image_url": ["assets/projects/image.png"],
+    "tech": ["Html", "Css", "Firebase", "Angular", "Bootstrap", "TypeScript"],
+    "demo": ""
+  }
+]
