@@ -1,0 +1,33 @@
+<!--* experience section -->
+<section class="experience" data-aos="fade-up" id="experience">
+  <span class="sec-btn" style="align-self: center; margin-top: 2rem"
+    >Experience</span
+  >
+  <br />
+
+  <div class="title-sec">
+    <p>Here is a quick summary of my most recent experiences:</p>
+  </div>
+
+  <div
+    class="exp-card"
+    data-aos="fade-left"
+    data-aos-duration="1300"
+    *ngFor="let exp of experience"
+  >
+    <div class="card-content">
+      <div class="exp-img">
+        <img [src]="exp.image_url" alt="next" loading="lazy" />
+      </div>
+      <div class="date">
+        <p>{{ exp.data }}</p>
+      </div>
+      <div class="exp-title">
+        <h2>{{ exp.title }}</h2>
+        <ul>
+          <li *ngFor="let desc of exp.description">{{ desc }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

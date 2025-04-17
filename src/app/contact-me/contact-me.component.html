@@ -1,0 +1,118 @@
+<!-- * contact me -->
+<section class="contact" data-aos="fade-up" id="contact">
+  <span class="sec-btn">Contact Me</span>
+  <br />
+  <div class="title-sec">
+    <p>
+      What’s next? Feel free to reach out to me if you're looking for a
+      developer.
+    </p>
+  </div>
+  <!-- form -->
+  <div class="container my-5 d-flex justify-content-center contact-form">
+    <div
+      class="card p-4 shadow-lg rounded-4"
+      style="max-width: 600px; width: 100%"
+    >
+      <h3 class="text-center mb-4 fw-bold fs-2">Send a Message</h3>
+      <form class="fs-3 contact-form" [formGroup]="myForm">
+        <div class="mb-3">
+          <label for="name" class="form-label fw-semibold">Your Name *</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="name"
+            placeholder="please Enter Your Name"
+            required
+            formControlName="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Your Email *</label>
+          <input
+            type="email"
+            class="form-control form-control-lg"
+            id="email"
+            placeholder="you@example.com"
+            required
+            formControlName="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="to" class="form-label fw-semibold">To</label>
+          <input
+            type="email"
+            class="form-control form-control-lg"
+            id="to"
+            placeholder="ahmedelyamany.mohamed@gmail.com"
+            value="ahmedelyamany.mohamed@gmail.com"
+            required
+            disabled
+          />
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label fw-semibold">Subject *</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="subject"
+            placeholder="Enter your subject here"
+            required
+            formControlName="subject"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label fw-semibold">Message *</label>
+          <textarea
+            class="form-control form-control-lg"
+            id="message"
+            rows="4"
+            placeholder="Write your message here..."
+            required
+            formControlName="message"
+          ></textarea>
+        </div>
+        <div class="d-grid">
+          <button
+            type="submit"
+            class="btn btn-primary btn-lg fw-semibold"
+            (click)="onSubmit()"
+          >
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Spinner -->
+  <div class="text-center my-3" *ngIf="isLoading">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Sending...</span>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div
+    class="toast-container position-fixed bottom-0 center-0 p-3"
+    style="z-index: 9999"
+  >
+    <div
+      class="toast align-items-center text-white bg-danger border-0 fs-3"
+      role="alert"
+      [class.show]="showToast"
+      [class.hide]="!showToast"
+    >
+      <div class="d-flex">
+        <div class="toast-body">
+          {{ toastMessage }}
+        </div>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-2 m-auto"
+          (click)="hideToast()"
+        ></button>
+      </div>
+    </div>
+  </div>
+</section>

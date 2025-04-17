@@ -1,0 +1,52 @@
+svg {
+    width: 500px; /* Adjust as you like */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #eee; optional */
+  }
+  
+  
+.draw-path {
+    fill: none !important;
+    stroke: #eee;
+    stroke-width: 2;
+    stroke-dasharray: 1591;
+    /* stroke-dashoffset: 5000; */
+    animation: draw 5s ease forwards infinite;
+    animation-delay: var(--delay, 0.9s);
+  }
+  
+  @keyframes draw {
+  0%{
+    stroke-dashoffset: 1591;
+  
+  }
+  100%{
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .section{
+    background-color: rgba(30, 42, 92, 0.732) !important
+  }
+  .home-bg {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .h-100vh {
+    height: 100vh;
+    /* width: 100vw; */
+  }
+
+  .animated-text {
+    color: #ffbd59;
+    overflow: hidden;
+    border-right: 2px solid #ffbd59;
+    white-space: nowrap;
+    animation: blink 0.7s step-end infinite;
+  }
+    
