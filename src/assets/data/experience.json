@@ -30,5 +30,15 @@
     ],
     "image_url": "assets/experience/nvidia-logo-16.png",
     "data": "10-8-2022"
+  },
+  {
+    "title": "PathLine – InternShip",
+    "description": [
+      "Completed a Web Development Level III internship at Pathline Training Academy with a focus on Angular framework.",
+      "Developed a fully responsive personal portfolio website using Angular,showcasing skills,projects,and experience ",
+      "Gained practical experience in Angular CLI, TypeScript, and modular design principles. "
+    ],
+    "image_url": "assets/experience/pathline_training_academy_logo.jpeg",
+    "data": "4-2025"
   }
 ]
