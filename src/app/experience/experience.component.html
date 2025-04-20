@@ -13,7 +13,9 @@
     class="exp-card"
     data-aos="fade-left"
     data-aos-duration="1300"
-    *ngFor="let exp of experience"
+    *ngFor="let exp of experience; let i = index"
+    [class.not-first]="i !== 0"
+    [class.first-card]="i === 0"
   >
     <div class="card-content">
       <div class="exp-img">

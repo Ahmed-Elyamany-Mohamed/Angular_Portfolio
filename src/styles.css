@@ -30,7 +30,6 @@ html {
 .navbar-brand img {
   width: 6rem;
   height: 6rem;
-  background-color: black;
 }
 .navbar-toggler {
   border: none;
@@ -45,31 +44,6 @@ html {
   border-radius: 1.2rem;
   background-color: #4b556320;
   display: inline-block; /* Important so they line up similar to buttons */
-}
-
-/* Make toggler icon white in dark mode */
-body.dark-mode .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-body.dark-mode .navbar .btn {
-  background-color: #374151 !important;
-  color: #d1d5db !important;
-}
-
-body.dark-mode .card {
-  background-color: #11162430;
-}
-body.dark-mode .card input,
-body.dark-mode .card textarea {
-  background-color: #111624d8;
-}
-body.dark-mode .card,
-body.dark-mode .card ::placeholder {
-  color: white;
-}
-body.dark-mode .card :disabled {
-  color: #8c97a2;
 }
 
 .sociol-icons i {
@@ -105,6 +79,117 @@ body.dark-mode .card :disabled {
 .pro-tech span:hover {
   color: white !important;
 }
+
+.collapse ul li a {
+  color: rgba(0, 0, 0, 0.552);
+  position: relative;
+}
+.collapse ul li:not(:last-child) a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5%;
+  background-color: rgb(83, 13, 196);
+  left: 0px;
+  bottom: 0px;
+}
+.collapse ul li a:hover::before {
+  width: 100%;
+  height: 5%;
+  transition: all 0.3s linear;
+}
+.collapse ul li a:hover {
+  color: #15101c;
+}
+
+.sociol-icons a {
+  text-decoration: none;
+  color: black;
+}
+
+/* !! Global Dark Mode */
+/* Make toggler icon white in dark mode */
+body.dark-mode .sociol-icons a {
+  text-decoration: none;
+  color: white;
+}
+body.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+body.dark-mode .navbar .btn {
+  background-color: #374151 !important;
+  color: #d1d5db !important;
+}
+body.dark-mode .card {
+  background-color: #11162430;
+}
+body.dark-mode .card input,
+body.dark-mode .card textarea {
+  background-color: #111624d8;
+}
+body.dark-mode .card,
+body.dark-mode .card ::placeholder {
+  color: white;
+}
+body.dark-mode .card :disabled {
+  color: #8c97a2;
+}
+body.dark-mode .pro-tech span:hover::before {
+  background-color: #3a4962e2;
+  z-index: -1;
+  /* color: white !important; */
+}
+body.dark-mode .exp-card.not-first .exp-img img {
+  background-color: rgba(255, 255, 255, 0.756);
+}
+.exp-card.first-card .exp-img img {
+  background-color: #6e0101;
+}
+body.dark-mode .exp-card,
+body.dark-mode .pro-card {
+  box-shadow: inset 0 4px 12px rgba(234, 233, 233, 0.05),
+    inset 0 -4px 12px rgba(103, 102, 102, 0.4);
+}
+
+.dark-mode {
+  background-color: #030712;
+  color: #d1d5db;
+  transition: all 0.3s linear;
+}
+/* !! this for landing page */
+/* body.dark-mode .section {
+  background-color: #291a40 !important;
+  transition: all 0.3s linear;
+} */
+body.dark-mode p {
+  color: #d1d5db !important;
+}
+body.dark-mode button {
+  color: #d1d5db !important;
+}
+body.dark-mode .navbar {
+  background-color: #030712 !important;
+}
+body.dark-mode .navbar .nav-item a {
+  color: #d1d5db !important;
+}
+body {
+  transition: all 0.3s linear;
+}
+body.dark-mode .navbar .nav-item .dark i {
+  font-size: 0;
+}
+body.dark-mode .sec-btn {
+  background-color: #374151;
+  color: #d1d5db;
+}
+
+/* !! End Global Dark Mode */
+
+.available i {
+  color: #10b981;
+}
+
 /* ! mobile  */
 @media (max-width: 767px) {
   .container {
@@ -128,71 +213,6 @@ body.dark-mode .card :disabled {
   .section p {
     font-size: 2rem;
   }
-
-  body.dark-mode .section {
-    background-color: #291a40 !important;
-    transition: all 0.3s linear;
-  }
-
-  /* ? dark */
-  .dark-mode {
-    background-color: #030712;
-    color: #d1d5db;
-    transition: all 0.3s linear;
-  }
-  body.dark-mode p {
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode button {
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode .navbar {
-    background-color: #030712 !important;
-  }
-  body.dark-mode .navbar .nav-item a {
-    color: #d1d5db !important;
-  }
-  body {
-    transition: all 0.3s linear;
-  }
-
-  body.dark-mode .navbar .nav-item .dark i {
-    font-size: 0;
-  }
-
-  body.dark-mode .exp-card,
-  body.dark-mode .pro-card {
-    background-color: #0b1018;
-  }
-
-  /* Make toggler icon white in dark mode */
-  body.dark-mode .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-
-  body.dark-mode .navbar .btn {
-    background-color: #374151 !important;
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode .card {
-    background-color: #11162430;
-  }
-  body.dark-mode .card input,
-  body.dark-mode .card textarea {
-    background-color: #111624d8;
-  }
-  body.dark-mode .card,
-  body.dark-mode .card ::placeholder {
-    color: white;
-  }
-  body.dark-mode .card :disabled {
-    color: #8c97a2;
-  }
-
-  /* ? end dark */
 
   .navbar .btn {
     margin-left: 0 !important;
@@ -298,9 +318,6 @@ body.dark-mode .card :disabled {
   .location i {
     font-size: 1.6rem;
   }
-  .available i {
-    color: #10b981;
-  }
 
   .sociol-icons {
     font-size: 2.5rem;
@@ -345,10 +362,7 @@ body.dark-mode .card :disabled {
     background-color: #e5e7eb;
     color: #4b5563;
   }
-  body.dark-mode .sec-btn {
-    background-color: #374151;
-    color: #d1d5db;
-  }
+
   .Curious {
     margin: 0 2rem;
     padding: 1rem;
@@ -383,18 +397,6 @@ body.dark-mode .card :disabled {
     gap: 5.8rem;
     align-items: center;
     justify-content: center;
-  }
-  .skills-info .row .col-2 img {
-    object-fit: cover;
-    width: 5rem;
-  }
-  .skills-info .row .telwend img {
-    object-fit: cover;
-    width: 7rem;
-  }
-  .skills-info .row .figma img {
-    object-fit: cover;
-    width: 4rem;
   }
 
   /** experience */
@@ -582,34 +584,6 @@ body.dark-mode .card :disabled {
     margin: 0 auto;
   }
 
-  /* ? dark */
-  .dark-mode {
-    background-color: #030712;
-    color: #d1d5db;
-    transition: all 0.3s linear;
-  }
-  body.dark-mode p {
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode button {
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode .navbar {
-    background-color: #030712 !important;
-  }
-  body.dark-mode .navbar .nav-item a {
-    color: #d1d5db !important;
-  }
-  body {
-    transition: all 0.3s linear;
-  }
-
-  body.dark-mode .navbar .nav-item .dark i {
-    font-size: 0;
-  }
-
   .section {
     display: flex;
     align-items: center;
@@ -618,18 +592,6 @@ body.dark-mode .card :disabled {
   .section p {
     font-size: 2rem;
   }
-
-  body.dark-mode .section {
-    background-color: #291a40 !important;
-    transition: all 0.3s linear;
-  }
-
-  body.dark-mode .exp-card,
-  body.dark-mode .pro-card {
-    background-color: #0b1018;
-  }
-
-  /* ? end dark */
 
   /* * skills sec */
 
@@ -742,7 +704,6 @@ body.dark-mode .card :disabled {
   }
   .available i {
     font-size: 2rem;
-    color: #10b981;
   }
 
   .sociol-icons {
@@ -778,10 +739,7 @@ body.dark-mode .card :disabled {
     position: absolute;
     top: 0;
   }
-  body.dark-mode .sec-btn {
-    background-color: #374151;
-    color: #d1d5db;
-  }
+
   .title-sec {
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -858,18 +816,6 @@ body.dark-mode .card :disabled {
     margin-top: 5rem;
     align-items: center;
     justify-content: center;
-  }
-  .skills-info .row .col-2 img {
-    object-fit: cover;
-    width: 9rem;
-  }
-  .skills-info .row .telwend img {
-    object-fit: cover;
-    width: 9rem;
-  }
-  .skills-info .row .figma img {
-    object-fit: cover;
-    width: 5rem;
   }
 
   /** experience */
@@ -1097,47 +1043,6 @@ body.dark-mode .card :disabled {
     font-size: 2rem;
   }
 
-  body.dark-mode .section {
-    background-color: #291a40 !important;
-    transition: all 0.3s linear;
-  }
-
-  /* ? dark */
-  .dark-mode {
-    background-color: #030712;
-    color: #d1d5db;
-    transition: all 0.3s linear;
-  }
-  body.dark-mode p {
-    /* background-color: #030712; */
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode button {
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode .navbar {
-    background-color: #030712 !important;
-  }
-  body.dark-mode .navbar .nav-item a {
-    color: #d1d5db !important;
-  }
-  body {
-    transition: all 0.3s linear;
-  }
-
-  body.dark-mode .navbar .nav-item .dark i {
-    font-size: 0;
-  }
-
-  body.dark-mode .exp-card,
-  body.dark-mode .pro-card {
-    background-color: #0b1018;
-  }
-
-  /* ? end dark */
-
   /* * skills sec */
 
   .skills-info .row .col-2 i {
@@ -1155,9 +1060,6 @@ body.dark-mode .card :disabled {
     width: 180rem;
   }
 
-  .navbar-brand img {
-    /* background-color: transparent; */
-  }
   .navbar-brand img:hover {
     transform: scale(1.25);
   }
@@ -1167,7 +1069,6 @@ body.dark-mode .card :disabled {
     width: 110%;
   }
   .nav-item i {
-    /* vertical-align: middle; */
     margin-top: 1rem;
     margin-left: 1rem;
     font-size: 1.8rem;
@@ -1205,7 +1106,6 @@ body.dark-mode .card :disabled {
     align-items: center;
     justify-content: center;
     gap: 4.8rem;
-    /* width: 128rem; */
     width: 160rem;
     padding-right: 14rem;
   }
@@ -1260,7 +1160,6 @@ body.dark-mode .card :disabled {
   }
   .available i {
     font-size: 1.6rem;
-    color: #10b981;
   }
 
   .sociol-icons {
@@ -1297,10 +1196,7 @@ body.dark-mode .card :disabled {
     position: absolute;
     top: 0;
   }
-  body.dark-mode .sec-btn {
-    background-color: #374151;
-    color: #d1d5db;
-  }
+
   .title-sec {
     margin-top: 5rem;
     margin-bottom: 3rem;
@@ -1378,18 +1274,6 @@ body.dark-mode .card :disabled {
     margin-top: 5rem;
     align-items: center;
     justify-content: center;
-  }
-  .skills-info .row .col-2 img {
-    object-fit: cover;
-    width: 9rem;
-  }
-  .skills-info .row .telwend img {
-    object-fit: cover;
-    width: 9rem;
-  }
-  .skills-info .row .figma img {
-    object-fit: cover;
-    width: 5rem;
   }
 
   /** experience */
@@ -1618,43 +1502,6 @@ body.dark-mode .card :disabled {
     font-size: 2rem;
   }
 
-  /* ? dark */
-  .dark-mode {
-    background-color: #030712;
-    color: #d1d5db;
-    transition: all 0.3s linear;
-  }
-  body.dark-mode .section {
-    background-color: #291a40 !important;
-    transition: all 0.3s linear;
-  }
-  body.dark-mode p {
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode button {
-    color: #d1d5db !important;
-  }
-
-  body.dark-mode .navbar {
-    background-color: #030712 !important;
-  }
-  body.dark-mode .navbar .nav-item a {
-    color: #d1d5db !important;
-  }
-  body {
-    transition: all 0.3s linear;
-  }
-
-  body.dark-mode .navbar .nav-item .dark i {
-    font-size: 0;
-  }
-  body.dark-mode .experience .exp-card .card-content .exp-img img {
-    color: white;
-  }
-
-  /* ? end dark */
-
   header {
     position: sticky;
     top: 0;
@@ -1662,9 +1509,6 @@ body.dark-mode .card :disabled {
     width: 100%;
   }
 
-  .navbar-brand img {
-    /* background-color: transparent; */
-  }
   .navbar-brand img:hover {
     transform: scale(1.25);
   }
@@ -1770,7 +1614,6 @@ body.dark-mode .card :disabled {
   }
   .available i {
     font-size: 1.6rem;
-    color: #10b981;
   }
 
   .sociol-icons {
@@ -1807,10 +1650,7 @@ body.dark-mode .card :disabled {
     position: absolute;
     top: 0;
   }
-  body.dark-mode .sec-btn {
-    background-color: #374151;
-    color: #d1d5db;
-  }
+
   .title-sec {
     margin-top: 5rem;
     margin-bottom: 3rem;
@@ -1819,7 +1659,7 @@ body.dark-mode .card :disabled {
   .about-me {
     display: flex;
     flex-direction: row;
-    /* width: 128rem; */
+
     gap: 4.8rem;
     align-content: center;
     justify-content: center;
@@ -1831,7 +1671,7 @@ body.dark-mode .card :disabled {
   .img2 .my-img {
     padding-left: 20rem;
     background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    /* box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); Shadow at bottom and sides */
+
     border-radius: 0.8rem; /* Optional rounded corners */
     width: 40rem;
     height: 45rem;
@@ -1864,7 +1704,6 @@ body.dark-mode .card :disabled {
   }
 
   .Curious .cer ul {
-    /* display: grid; */
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     font-size: 1.6rem;
@@ -1912,14 +1751,10 @@ body.dark-mode .card :disabled {
     border-radius: 1.2rem;
     margin-bottom: 5rem;
   }
-  body.dark-mode .exp-card,
-  body.dark-mode .pro-card {
-    background-color: #0b1018;
-  }
+
   .exp-card .card-content {
     display: flex;
     flex-direction: row;
-    /* flex-direction: column; */
     justify-content: center;
     margin: 3.2rem;
     gap: 4.8rem;
@@ -1937,14 +1772,11 @@ body.dark-mode .card :disabled {
     font-size: 2rem;
   }
   .exp-card .card-content .exp-title p {
-    /* margin: 1.6rem 0; */
     font-size: 1.23rem;
     font-weight: 500;
   }
 
   .exp-card .card-content .exp-img {
-    /* display: flex;
-    justify-content: baseline; */
     max-width: 10.2rem;
     height: 10.2rem;
     position: relative;
@@ -1975,13 +1807,11 @@ body.dark-mode .card :disabled {
   /* * projects  */
 
   .project {
-    /* width: 115.2rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .pro-card {
-    /* width: 34.3rem; */
     width: 115.2rem;
     height: 48rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
