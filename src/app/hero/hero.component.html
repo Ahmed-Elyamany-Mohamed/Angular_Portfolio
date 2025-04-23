@@ -3,7 +3,12 @@
     <div class="introduction">
       <div class="my-img" data-aos="fade-left" data-aos-duration="1300">
         <div class="img">
-          <img src="assets/ana.jpeg" alt="Ahmed Elyamany" loading="lazy" />
+          <img
+            src="assets/ana.jpeg"
+            alt="Ahmed Elyamany"
+            loading="lazy"
+            (contextmenu)="disableClick($event)"
+          />
         </div>
       </div>
       <div class="intro" data-aos="fade-right" data-aos-duration="1300">
@@ -30,16 +35,23 @@
     </div>
 
     <div class="sociol-icons" data-aos="fade-right" data-aos-duration="1300">
-      <a href="https://github.com/Ahmed-Elyamany-Mohamed" target="_blank"
+      <a
+        href="https://github.com/Ahmed-Elyamany-Mohamed"
+        target="_blank"
+        [appSafeLink]="'my-github-link'"
         ><i class="fa-brands fa-github"></i
       ></a>
-      <a href="www.linkedin.com/in/ahmed-elyamany-mohamed" target="_blank"
+      <a
+        href="www.linkedin.com/in/ahmed-elyamany-mohamed"
+        target="_blank"
+        [appSafeLink]="'my-linkedin-link'"
         ><i class="fa-brands fa-linkedin-in"></i>
       </a>
       <a href="#contact"> <i class="fa-brands fa-google"></i></a>
       <a
         href="https://wa.me/201033405989?text=Hello%2C%20I'm%20interested%20in%20your%20work!"
         target="_blank"
+        appSafeLink="my-whatsapp-link"
       >
         <i class="fa-brands fa-whatsapp"></i>
       </a>

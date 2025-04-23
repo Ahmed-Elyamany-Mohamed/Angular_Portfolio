@@ -107,6 +107,13 @@ html {
   color: black;
 }
 
+/*? prevent images to interaction */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none; /* optional: fully disable interaction */
+}
+
 /* !! Global Dark Mode */
 /* Make toggler icon white in dark mode */
 body.dark-mode .sociol-icons a {
@@ -174,7 +181,7 @@ body.dark-mode .navbar .nav-item a {
   color: #d1d5db !important;
 }
 body {
-  transition: all 0.3s linear;
+  transition: all 0.4s linear;
 }
 body.dark-mode .navbar .nav-item .dark i {
   font-size: 0;
@@ -1518,8 +1525,9 @@ body.dark-mode .sec-btn {
     width: 100%;
   }
   .nav-item i {
-    margin-top: 1rem;
     margin-left: 1rem;
+    margin-right: 1rem;
+    top: 0.46rem;
     font-size: 1.8rem;
     position: relative;
     cursor: pointer;
@@ -1746,7 +1754,7 @@ body.dark-mode .sec-btn {
   }
   .exp-card {
     width: 89.6rem;
-    height: 28.8rem;
+    height: fit-content;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
     border-radius: 1.2rem;
     margin-bottom: 5rem;

@@ -40,5 +40,16 @@
     ],
     "image_url": "assets/experience/pathline.png",
     "data": "4-2025"
+  },
+  {
+    "title": "Angular Course – Udemy",
+    "description": [
+      "successfully completed the course Angular - The Complete Guide (2025 Edition).",
+      "A hands-on deep dive into Angular’s core concepts including components, routing, forms, and services.",
+      "Learned best practices for building scalable and maintainable Angular applications.",
+      "Explored advanced topics such as state management, lazy loading, and performance optimization."
+    ],
+    "image_url": "assets/experience/Angular-cert.jpg",
+    "data": "23-4-2025"
   }
 ]

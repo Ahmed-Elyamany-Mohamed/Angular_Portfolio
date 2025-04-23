@@ -75,27 +75,18 @@ export class ContactMeComponent {
 
     emailjs
       .send(
-        'service_91oxh2v', // e.g., 'service_abc123'
-        'template_0h5wqqh', // e.g., 'template_xyz456'
+        'service_91oxh2v',
+        'template_0h5wqqh',
         formData,
-        '4CwRBZsf9sSM5lWFs' // e.g., 'public_n5faFxyzAbc'
+        '4CwRBZsf9sSM5lWFs'
       )
       .then(
-        (response) => {
-          // console.log(
-          //   'Email sent successfully!',
-          //   response.status,
-          //   response.text
-          // );
+        () => {
           this.isLoading = false;
           this.showToastMessage('✅ Message sent successfully!');
           this.myForm.reset();
-          // alert('Message sent!');
-          // this.myForm.reset();
         },
-        (error) => {
-          // console.error('Email sending failed:', error);
-          // alert('Failed to send. Please try again.');
+        () => {
           this.isLoading = false;
           this.showToastMessage('❌ Failed to send message. Please try again.');
         }
@@ -111,5 +102,17 @@ export class ContactMeComponent {
 
   hideToast() {
     this.showToast = false;
+  }
+
+  get formIsInvalid() {
+    return (
+      (this.name.invalid && this.name.dirty && this.name.touched) ||
+      (this.subject.invalid && this.subject.dirty && this.subject.touched) ||
+      (this.message.invalid && this.message.dirty && this.message.touched)
+    );
+  }
+
+  get emailIsInvalid() {
+    return this.email.invalid && this.email.dirty && this.email.touched;
   }
 }

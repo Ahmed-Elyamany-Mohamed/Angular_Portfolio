@@ -44,16 +44,25 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <span class="light"
-              ><i
-                (click)="toggleTheme()"
-                class="fa-solid fa-sun"
+            <span *ngIf="(currentTheme$ | async) === 'light'" class="light">
+              <i
                 id="dark-mode-toggle"
-              ></i
-            ></span>
+                class="fa-regular fa-moon"
+                (click)="toggleTheme()"
+                [class.animate-toggle]="toggleInProgress"
+              ></i>
+            </span>
+            <span *ngIf="(currentTheme$ | async) === 'dark'" class="light">
+              <i
+                class="fa-regular fa-sun"
+                id="dark-mode-toggle"
+                (click)="toggleTheme()"
+                [class.animate-toggle]="toggleInProgress"
+              ></i>
+            </span>
           </li>
           <li class="nav-item">
-            <a href="Ahmed Elyamany Mohamed.pdf" download>
+            <a href="../../assets/Ahmed Elyamany Mohamed.pdf" download>
               <span class="btn btn-outline-dark mx-3">Download CV</span>
             </a>
           </li>

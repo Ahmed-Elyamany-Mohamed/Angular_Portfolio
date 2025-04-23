@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { SafeLinkDirective } from '../directives/safe-link.directive';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [SafeLinkDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })
 export class HeroComponent {
-  img: string = 'assets/ana.jpeg';
+  disableClick(event: MouseEvent) {
+    event.preventDefault();
+  }
 }

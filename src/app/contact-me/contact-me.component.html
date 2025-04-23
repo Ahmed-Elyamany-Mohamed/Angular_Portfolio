@@ -17,7 +17,9 @@
       <h3 class="text-center mb-4 fw-bold fs-2">Send a Message</h3>
       <form class="fs-3 contact-form" [formGroup]="myForm">
         <div class="mb-3">
-          <label for="name" class="form-label fw-semibold">Your Name *</label>
+          <label for="name" class="form-label fw-semibold"
+            >Your Name <span class="asterisk">*</span></label
+          >
           <input
             type="text"
             class="form-control form-control-lg"
@@ -28,7 +30,9 @@
           />
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label fw-semibold">Your Email *</label>
+          <label for="email" class="form-label fw-semibold"
+            >Your Email <span class="asterisk">*</span></label
+          >
           <input
             type="email"
             class="form-control form-control-lg"
@@ -51,7 +55,9 @@
           />
         </div>
         <div class="mb-3">
-          <label for="subject" class="form-label fw-semibold">Subject *</label>
+          <label for="subject" class="form-label fw-semibold"
+            >Subject <span class="asterisk">*</span></label
+          >
           <input
             type="text"
             class="form-control form-control-lg"
@@ -62,7 +68,9 @@
           />
         </div>
         <div class="mb-3">
-          <label for="message" class="form-label fw-semibold">Message *</label>
+          <label for="message" class="form-label fw-semibold"
+            >Message <span class="asterisk">*</span></label
+          >
           <textarea
             class="form-control form-control-lg"
             id="message"
@@ -77,18 +85,21 @@
             type="submit"
             class="btn btn-primary btn-lg fw-semibold"
             (click)="onSubmit()"
+            [disabled]="myForm.invalid"
           >
             Send
           </button>
+          @if (formIsInvalid) {
+          <div class="alert alert-danger mt-2" role="alert">
+            Please fill in all required fields.
+          </div>
+          }@else if (emailIsInvalid) {
+          <div class="alert alert-danger mt-2" role="alert">
+            Please enter a valid email address.
+          </div>
+          }
         </div>
       </form>
-    </div>
-  </div>
-
-  <!-- Spinner -->
-  <div class="text-center my-3" *ngIf="isLoading">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Sending...</span>
     </div>
   </div>
 
