@@ -21,13 +21,5 @@ export class SafeLinkDirective {
       event.preventDefault();
       return;
     }
-
-    const target = event.target as HTMLAnchorElement;
-
-    if (target?.tagName === 'A' && target.href) {
-      const url = new URL(target.href);
-      url.searchParams.append('from', this.appSafeLink());
-      target.href = url.toString();
-    }
   }
 }
