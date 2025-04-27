@@ -24,9 +24,13 @@
 }
 body.dark-mode .animated-text {
   color: rgb(173, 16, 235);
+  display: inline-block;
+  min-width: 180px;
 }
 .animated-text {
   color: rgb(110, 6, 152);
+  display: inline-block;
+  min-width: 180px;
 }
 .icon-rxjs:before {
   content: "\e916";
