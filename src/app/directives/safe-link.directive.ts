@@ -10,7 +10,7 @@ import { Directive, input } from '@angular/core';
 })
 export class SafeLinkDirective {
   constructor() {}
-  appSafeLink = input('myApp');
+  appSafeLink;
 
   onLeaveLink(event: MouseEvent) {
     console.log('Safe link activated');
