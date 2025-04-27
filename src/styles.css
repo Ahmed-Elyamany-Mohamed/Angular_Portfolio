@@ -1,14 +1,148 @@
-@import "@fortawesome/fontawesome-free/css/all.css";
-
-/* ? global */
-
+@font-face {
+  font-family: icomoon;
+  src: url("assets/fonts/icomoon/icomoon.eot?q9hn83");
+  src: url("assets/fonts/icomoon/icomoon.eot?q9hn83#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/icomoon/icomoon.ttf?q9hn83") format("truetype"),
+    url("assets/fonts/icomoon/icomoon.woff?q9hn83") format("woff"),
+    url("assets/fonts/icomoon/icomoon.svg?q9hn83#icomoon") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+[class*=" icon-"],
+[class^="icon-"] {
+  font-family: icomoon !important;
+  speak: never;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body.dark-mode .animated-text {
+  color: rgb(173, 16, 235);
+}
+.animated-text {
+  color: rgb(110, 6, 152);
+}
+.icon-rxjs:before {
+  content: "\e916";
+  color: #b21aa0;
+}
+.icon-angular:before {
+  content: "\e900";
+  color: #dd0031;
+}
+.icon-bootstrap:before {
+  content: "\e901";
+  color: #5e3a94;
+}
+.icon-cplusplus:before {
+  content: "\e903";
+  color: #00599c;
+}
+.icon-css3:before {
+  content: "\e904";
+  color: #1572b6;
+}
+.icon-dart:before {
+  content: "\e905";
+  color: #0175c2;
+}
+.icon-docker:before {
+  content: "\e902";
+  color: #1488c6;
+}
+.icon-figma:before {
+  content: "\e906";
+  color: #f24e1e;
+}
+.icon-firebase:before {
+  content: "\e907";
+  color: #ffca28;
+}
+.icon-flutter:before {
+  content: "\e908";
+  color: #02569b;
+}
+.icon-git:before {
+  content: "\e909";
+  color: #f05032;
+}
+.icon-github:before {
+  content: "\e90a";
+  color: #5c2d91;
+}
+.icon-gmail:before {
+  content: "\e90b";
+  color: #d14836;
+}
+.icon-html5:before {
+  content: "\e90c";
+  color: #e34f26;
+}
+.icon-java:before {
+  content: "\e90d";
+  color: #007396;
+}
+.icon-javascript:before {
+  content: "\e90e";
+  color: #f7df1e;
+}
+.icon-keras:before {
+  content: "\e919";
+  color: #d00000;
+}
+.icon-linkedin:before {
+  content: "\e90f";
+  color: #0077b5;
+}
+.icon-microsoftoffice:before {
+  content: "\e91b";
+  color: #e74025;
+}
+.icon-npm:before {
+  content: "\e914";
+  color: #cb3837;
+}
+.icon-python:before {
+  content: "\e910";
+  color: #3776ab;
+}
+.icon-tensorflow:before {
+  content: "\e918";
+  color: #ff6f00;
+}
+.icon-typescript:before {
+  content: "\e912";
+  color: #007acc;
+}
+.icon-whatsapp:before {
+  content: "\e913";
+  color: #25d366;
+}
+.icon-csharp:before {
+  content: "\e917";
+  color: #239120;
+}
+.icon-dot-net:before {
+  content: "\e91c";
+  color: #5c2d91;
+}
+body {
+  overflow-x: hidden;
+  transition: 0.4s linear;
+}
 html {
   font-size: 10px;
-  font-family: "Inter";
+  font-family: Inter;
 }
 .title-sec {
   font-size: 1.8rem;
-  font-weight: normal;
+  font-weight: 400;
   color: #4b5563;
   text-align: center;
 }
@@ -16,13 +150,9 @@ html {
   width: 100%;
   margin: 0 auto;
 }
-
 .section {
   background-color: rgba(30, 42, 92, 0.732) !important;
 }
-
-/* * header */
-
 .navbar {
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -34,8 +164,6 @@ html {
 .navbar-toggler {
   border: none;
 }
-/* end header */
-
 .pro-tech span {
   padding: 0.4rem 2rem;
   font-size: 1.4rem;
@@ -43,43 +171,35 @@ html {
   object-fit: contain;
   border-radius: 1.2rem;
   background-color: #4b556320;
-  display: inline-block; /* Important so they line up similar to buttons */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
 }
-
 .sociol-icons i {
   cursor: pointer;
   padding: 0 5px;
 }
-
-.pro-tech span {
-  position: relative;
-  cursor: pointer;
-}
 .pro-tech span::before {
   content: "";
   position: absolute;
-
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 0%;
   height: 0%;
-
-  background-color: white;
-  color: black !important;
+  background-color: #fff;
+  color: #000 !important;
   border-radius: 15px;
-  transition: all 0.3s linear;
+  transition: 0.3s linear;
 }
 .pro-tech span:hover::before {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: #000;
   z-index: -1;
-  /* color: white !important; */
 }
 .pro-tech span:hover {
-  color: white !important;
+  color: #fff !important;
 }
-
 .collapse ul li a {
   color: rgba(0, 0, 0, 0.552);
   position: relative;
@@ -89,43 +209,44 @@ html {
   position: absolute;
   width: 0%;
   height: 5%;
-  background-color: rgb(83, 13, 196);
-  left: 0px;
-  bottom: 0px;
+  background-color: #530dc4;
+  left: 0;
+  bottom: 0;
 }
 .collapse ul li a:hover::before {
   width: 100%;
   height: 5%;
-  transition: all 0.3s linear;
+  transition: 0.3s linear;
 }
 .collapse ul li a:hover {
   color: #15101c;
 }
-
 .sociol-icons a {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
-
-/*? prevent images to interaction */
 img {
   -webkit-user-drag: none;
   user-select: none;
-  pointer-events: none; /* optional: fully disable interaction */
+  pointer-events: none;
 }
-
-/* !! Global Dark Mode */
-/* Make toggler icon white in dark mode */
 body.dark-mode .sociol-icons a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 body.dark-mode .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-body.dark-mode .navbar .btn {
-  background-color: #374151 !important;
+body.dark-mode .navbar .btn,
+body.dark-mode .navbar .nav-item a:hover,
+body.dark-mode button,
+body.dark-mode p {
   color: #d1d5db !important;
+}
+body.dark-mode .navbar .btn:hover {
+  background-color: #fff !important;
+  color: #030712 !important;
+  transition: 0.3s linear;
 }
 body.dark-mode .card {
   background-color: #11162430;
@@ -136,7 +257,7 @@ body.dark-mode .card textarea {
 }
 body.dark-mode .card,
 body.dark-mode .card ::placeholder {
-  color: white;
+  color: #fff;
 }
 body.dark-mode .card :disabled {
   color: #8c97a2;
@@ -144,7 +265,6 @@ body.dark-mode .card :disabled {
 body.dark-mode .pro-tech span:hover::before {
   background-color: #3a4962e2;
   z-index: -1;
-  /* color: white !important; */
 }
 body.dark-mode .exp-card.not-first .exp-img img {
   background-color: rgba(255, 255, 255, 0.756);
@@ -157,31 +277,16 @@ body.dark-mode .pro-card {
   box-shadow: inset 0 4px 12px rgba(234, 233, 233, 0.05),
     inset 0 -4px 12px rgba(103, 102, 102, 0.4);
 }
-
 .dark-mode {
   background-color: #030712;
   color: #d1d5db;
-  transition: all 0.3s linear;
-}
-/* !! this for landing page */
-/* body.dark-mode .section {
-  background-color: #291a40 !important;
-  transition: all 0.3s linear;
-} */
-body.dark-mode p {
-  color: #d1d5db !important;
-}
-body.dark-mode button {
-  color: #d1d5db !important;
+  transition: 0.3s linear;
 }
 body.dark-mode .navbar {
   background-color: #030712 !important;
 }
 body.dark-mode .navbar .nav-item a {
-  color: #d1d5db !important;
-}
-body {
-  transition: all 0.4s linear;
+  color: rgba(255, 255, 255, 0.519) !important;
 }
 body.dark-mode .navbar .nav-item .dark i {
   font-size: 0;
@@ -190,15 +295,20 @@ body.dark-mode .sec-btn {
   background-color: #374151;
   color: #d1d5db;
 }
-
-/* !! End Global Dark Mode */
-
 .available i {
   color: #10b981;
 }
-
-/* ! mobile  */
 @media (max-width: 767px) {
+  .card-content .contact2 .email i,
+  .card-content .contact2 .phone i,
+  .nav-item i,
+  .section p {
+    font-size: 2rem;
+  }
+  .nav-item a,
+  .sec-btn {
+    text-decoration: none;
+  }
   .container {
     width: 80%;
     margin: 0 auto;
@@ -207,85 +317,75 @@ body.dark-mode .sec-btn {
     transform: none !important;
     transform-origin: center center;
   }
-
   body {
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
   }
-
-  .section {
+  .experience,
+  .project,
+  .section,
+  .skills {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .section p {
-    font-size: 2rem;
-  }
-
   .navbar .btn {
     margin-left: 0 !important;
   }
-
-  /* * skills sec */
-
   .skills-info .row .col-2 i {
     font-size: 7rem;
   }
-
   header {
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
   }
-
   .collapse ul .button {
     width: fit-content;
     height: fit-content;
     font-size: 1.6rem;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     border-radius: 1.2rem;
     padding: 0.5rem;
   }
-  .nav-item a {
-    text-decoration: none;
-  }
   .nav-item i {
-    font-size: 2rem;
     position: relative;
     margin-bottom: 1.5rem;
   }
-
   .introduction {
-    margin: 6.4rem 1.6rem 0rem 1.6rem;
+    margin: 6.4rem 1.6rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+  .img2 .my-img,
   .introduction .my-img {
     padding: 2rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    border-radius: 0.8rem; /* Optional rounded corners */
+    background: rgba(128, 128, 128, 0.251);
+    border-radius: 0.8rem;
     width: 26rem;
     height: 28rem;
   }
-
+  .img2 .my-img .img img,
   .introduction .my-img .img img {
     width: 24rem;
     height: 28rem;
     object-fit: cover;
     margin-top: -3.5rem;
     margin-left: -1rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
     position: absolute;
   }
-
+  .exp-card .card-content .exp-img img,
+  .pro-tech span {
+    object-fit: contain;
+  }
   .about-me {
     display: flex;
     flex-direction: row;
-    /* width: 128rem; */
     gap: 4.8rem;
     flex-wrap: wrap;
     align-content: center;
@@ -296,170 +396,82 @@ body.dark-mode .sec-btn {
     margin-top: 2rem;
     left: 3rem;
   }
-
   .intro h2 {
     font-size: 3.6rem;
     font-weight: 500;
     margin-top: 2rem;
   }
-  .intro p {
+  .available p,
+  .date p,
+  .intro p,
+  .location i,
+  .location p,
+  .pro-info p,
+  ul li {
     font-size: 1.6rem;
-    font-weight: normal;
+  }
+  .intro p {
+    font-weight: 400;
     line-height: 2.4rem;
   }
-
   .address {
     margin-top: 2.8rem;
     margin-left: 1.6rem;
   }
-  .location,
-  .available {
+  .available,
+  .location {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
   }
-  .location p,
-  .available p {
-    font-size: 1.6rem;
+  .pro-tech span,
+  .sec-btn {
+    width: fit-content;
+    border-radius: 1.2rem;
+    display: inline-block;
   }
-  .location i {
-    font-size: 1.6rem;
-  }
-
   .sociol-icons {
     font-size: 2.5rem;
     margin-left: 1.6rem;
   }
-
   .sociol-icons i {
     padding-right: 0.4rem;
   }
-
-  .img2 .my-img {
-    padding: 2rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    border-radius: 0.8rem; /* Optional rounded corners */
-    width: 26rem;
-    height: 28rem;
-  }
-
-  .img2 .my-img .img img {
-    width: 24rem;
-    height: 28rem;
-    object-fit: cover;
-    margin-top: -3.5rem;
-    margin-left: -1rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
-    position: absolute;
-  }
-
-  /* *section about me */
   .sec-btn {
-    display: inline-block; /* so it only takes as much space as needed */
-    margin-bottom: 2.6rem; /* matches your original margin */
-    padding: 0.5rem 1rem; /* adjust for more/less space inside the box */
-    border-radius: 1.2rem; /* rounded corners */
+    margin-bottom: 2.6rem;
+    padding: 0.5rem 1rem;
     font-size: 1.4rem;
     font-weight: 500;
     text-align: center;
-    width: fit-content; /* shrink-to-fit */
-    text-decoration: none; /* remove underline if it’s an <a> */
-    box-sizing: border-box; /* helps control padding/width combos */
+    box-sizing: border-box;
     background-color: #e5e7eb;
     color: #4b5563;
   }
-
   .Curious {
     margin: 0 2rem;
-    padding: 1rem;
-    padding-top: 0;
+    padding: 0 1rem 1rem;
   }
   .Curious h2 {
     font-size: 2.4rem;
     font-weight: 500;
   }
+  .Curious .cer ul,
   .Curious p {
+    font-weight: 400;
     font-size: 1.6rem;
-    font-weight: normal;
   }
-
   .Curious .cer ul {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    gap: 0rem;
-    font-size: 1.6rem;
-    font-weight: normal;
+    gap: 0;
     line-height: 2.4rem;
-  }
-
-  /* * skills sec */
-
-  .skills {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
   .skills-info .row {
     gap: 5.8rem;
     align-items: center;
     justify-content: center;
   }
-
-  /** experience */
-  .experience {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .exp-card {
-    width: 34.3rem;
-    /* height: 50rem; */
-    height: fit-content;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-    border-radius: 1.2rem;
-    margin-bottom: 5rem;
-  }
-  .exp-card .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 3.2rem;
-    margin-top: 0;
-  }
-  .exp-card .card-content h2 {
-    margin: 1.6rem 0;
-  }
-
-  .exp-card .card-content .exp-img {
-    max-width: 10.2rem;
-    min-height: 5rem;
-    position: relative;
-    left: -1rem;
-    margin-top: 4rem;
-  }
-  .exp-card .card-content .exp-img img {
-    object-fit: contain;
-  }
-
-  .exp-card .exp-img img {
-    object-fit: cover;
-    width: 13.2rem;
-  }
-  .date p {
-    font-size: 1.6rem;
-  }
-  ul li {
-    font-size: 1.6rem;
-  }
-
-  /* * projects  */
-
-  .project {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+  .exp-card,
   .pro-card {
     width: 34.3rem;
     height: fit-content;
@@ -467,41 +479,51 @@ body.dark-mode .sec-btn {
     border-radius: 1.2rem;
     margin-bottom: 5rem;
   }
-
+  .contact .card-content,
+  .exp-card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 3.2rem 3.2rem;
+  }
+  .exp-card .card-content h2 {
+    margin: 1.6rem 0;
+  }
+  .exp-card .card-content .exp-img {
+    max-width: 10.2rem;
+    min-height: 5rem;
+    position: relative;
+    left: -1rem;
+    margin-top: 4rem;
+  }
+  .exp-card .exp-img img {
+    object-fit: cover;
+    width: 13.2rem;
+  }
   .pro-card .card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 3.2rem;
   }
-
   .pro-card .card-content .pro-img {
-    /* max-width: 28rem; */
     max-width: 28rem;
     min-height: 20.2rem;
-    padding: 3.2rem 0;
-    padding-left: 0.5rem;
-    padding-right: 3rem;
+    padding: 3.2rem 3rem 3.2rem 0.5rem;
     border-radius: 1.2rem;
     background-color: #4b55632b;
     box-shadow: 0 20px 30px rgba(5, 5, 5, 0.042);
   }
   .pro-card .card-content .pro-img img {
-    /* max-width: 26rem;
-    max-height: 19.2rem; */
     width: 110%;
     height: 110%;
-    object-fit: contain; /* make image fill container without stretching */
+    object-fit: contain;
   }
-
   .pro-info {
     margin-top: 3.2rem;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-  }
-  .pro-info p {
-    font-size: 1.6rem;
   }
   .pro-tech {
     display: flex;
@@ -512,38 +534,21 @@ body.dark-mode .sec-btn {
   .pro-tech span {
     padding: 0.4rem 2rem;
     font-size: 1.4rem;
-    width: fit-content;
-    object-fit: contain;
-    border-radius: 1.2rem;
     background-color: #4b556320;
-    display: inline-block; /* Important so they line up similar to buttons */
   }
-
   .pro-info a {
     font-size: 1.5rem;
   }
-
-  /* * contact me */
   .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  .contact .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 3.2rem;
-    margin-top: 0;
-  }
-
   .card-content .contact2 .email p,
   .phone p {
     font-size: 1.5rem;
     font-weight: 500;
   }
-
   .card-content .contact2 .email,
   .card-content .contact2 .phone {
     display: flex;
@@ -551,11 +556,6 @@ body.dark-mode .sec-btn {
     justify-content: center;
     gap: 0.5rem;
   }
-  .card-content .contact2 .email i,
-  .card-content .contact2 .phone i {
-    font-size: 2rem;
-  }
-
   .card-content .platforms {
     font-size: 1.6rem;
     text-align: center;
@@ -565,94 +565,103 @@ body.dark-mode .sec-btn {
     font-size: 3rem;
     gap: 1rem;
   }
-
-  .hero,
   .about-me,
-  .skills,
+  .contact,
   .experience,
+  .hero,
   .project,
-  .contact {
+  .skills {
     margin-bottom: 10rem;
   }
 }
-
-/* !-------------------------------------------------------- */
-/* ! tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .available i,
+  .card-content .contact2 .email i,
+  .card-content .contact2 .phone i,
+  .location i,
+  .nav-item i,
+  .pro-info p,
+  .section p {
+    font-size: 2rem;
+  }
+  .nav-item,
+  .navbar,
+  .navbar-brand,
+  .navbar-toggler-icon,
+  .sociol-icons {
+    font-size: 3rem;
+  }
+  .about-me,
+  .contact,
+  .experience,
+  .nav-item i,
+  .project,
+  .skills {
+    position: relative;
+  }
+  .nav-item a,
+  .sec-btn {
+    text-decoration: none;
+  }
+  .img2 .my-img,
+  .introduction .my-img {
+    background: rgba(128, 128, 128, 0.251);
+    width: 40rem;
+  }
+  .img2 .my-img .img img,
+  .introduction .my-img .img img {
+    object-fit: cover;
+    margin-top: -5.5rem;
+    margin-left: -17rem;
+  }
   html {
-    font-family: "Inter";
+    font-family: Inter;
   }
-
   body {
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
   }
-
   .container {
     margin: 0 auto;
   }
-
   .section {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .section p {
-    font-size: 2rem;
-  }
-
-  /* * skills sec */
-
   .skills-info .row .col-2 i {
     font-size: 10rem;
   }
-
   header {
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
   }
-
   .nav-item i {
     margin-top: 1rem;
     margin-left: 1rem;
-    font-size: 2rem;
-    position: relative;
   }
-
   .collapse ul .button {
     width: fit-content;
     height: fit-content;
     font-size: 1.6rem;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     border-radius: 1.2rem;
     padding: 0.5rem;
   }
-  .nav-item a {
-    text-decoration: none;
-  }
-
   .navbar {
     margin-top: 1rem;
-    font-size: 3rem;
     background-color: rgba(128, 128, 128, 0.118) !important;
-  }
-  .navbar-brand,
-  .nav-item,
-  .navbar-toggler-icon {
-    font-size: 3rem;
   }
   .navbar-toggler {
     border: none;
   }
-
   .navbar .container {
     gap: 1rem;
   }
-
   .introduction {
-    margin: 6.4rem 1.6rem 0rem 1.6rem;
+    margin: 6.4rem 1.6rem 0;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -660,163 +669,142 @@ body.dark-mode .sec-btn {
     gap: 4.8rem;
     width: 150rem;
   }
+  .address,
+  .intro {
+    margin-top: 4.8rem;
+  }
   .introduction .my-img {
     padding-left: 18rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    border-radius: 0.8rem; /* Optional rounded corners */
-    width: 40rem;
+    border-radius: 0.8rem;
     height: 26rem;
   }
-
   .introduction .my-img .img img {
     width: 24rem;
     height: 28rem;
-    object-fit: cover;
-    margin-top: -5.5rem;
-    margin-left: -17rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
     position: absolute;
-  }
-
-  .intro {
-    margin-top: 4.8rem;
   }
   .intro h2 {
     font-size: 6rem;
     font-weight: 500;
   }
-  .intro p {
+  .available p,
+  .intro p,
+  .location p {
     font-size: 2.6rem;
-    font-weight: normal;
+  }
+  .intro p {
+    font-weight: 400;
     line-height: 2.4rem;
   }
-
   .address {
-    margin-top: 4.8rem;
     margin-left: 1.6rem;
   }
-  .location,
-  .available {
+  .available,
+  .location {
     display: flex;
     align-items: baseline;
     gap: 1rem;
   }
-  .location p,
-  .available p {
-    font-size: 2.6rem;
-  }
-  .location i {
-    font-size: 2rem;
-  }
-  .available i {
-    font-size: 2rem;
-  }
-
   .sociol-icons {
-    font-size: 3rem;
     margin-left: 1.6rem;
   }
-
   .sociol-icons i {
     padding-right: 0.4rem;
   }
-
-  .about-me,
-  .skills,
-  .experience,
-  .project,
-  .contact {
-    position: relative;
-  }
-  /* *section about me */
   .sec-btn {
-    display: inline-block; /* so it only takes as much space as needed */
-    margin-bottom: 2.6rem; /* matches your original margin */
-    padding: 0.5rem 1rem; /* adjust for more/less space inside the box */
-    border-radius: 1.2rem; /* rounded corners */
+    display: inline-block;
+    margin-bottom: 2.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
     font-size: 1.8rem;
     font-weight: 500;
     text-align: center;
-    width: fit-content; /* shrink-to-fit */
-    text-decoration: none; /* remove underline if it’s an <a> */
-    box-sizing: border-box; /* helps control padding/width combos */
+    width: fit-content;
+    box-sizing: border-box;
     background-color: #e5e7eb;
     color: #4b5563;
     position: absolute;
     top: 0;
   }
-
+  .exp-card,
+  .pro-card,
+  .title-sec {
+    margin-bottom: 5rem;
+  }
+  .date p,
+  .exp-title,
+  .hero-img,
+  .pro-info a {
+    position: relative;
+  }
   .title-sec {
     margin-top: 5rem;
-    margin-bottom: 5rem;
     font-size: 3rem;
   }
-
   .about-me {
     display: flex;
     flex-direction: row;
-    /* width: 128rem; */
     width: 160rem;
-
     gap: 4.8rem;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
   }
   .hero-img {
-    position: relative;
     left: -140px;
   }
   .img2 .my-img {
     padding-left: 20rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    border-radius: 0.8rem; /* Optional rounded corners */
-    width: 40rem;
+    border-radius: 0.8rem;
     height: 45rem;
     margin-top: 20rem;
   }
-
   .img2 .my-img .img img {
     width: 35rem;
     height: 48rem;
-    object-fit: cover;
-    margin-top: -5.5rem;
-    margin-left: -17rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
     position: absolute;
+  }
+  .exp-card,
+  .pro-card,
+  .pro-tech span {
+    border-radius: 1.2rem;
   }
   .Curious {
     margin-top: 8rem;
     width: 584px;
   }
-  .Curious h2 {
+  .experience,
+  .skills {
+    width: 160rem;
+    display: flex;
+  }
+  .Curious h2,
+  .card-content .contact2 .email p,
+  .phone p {
     font-size: 3rem;
     font-weight: 500;
   }
   .Curious p {
     font-size: 2.2rem;
-    font-weight: normal;
+    font-weight: 400;
   }
   .Curious .cer ul {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
     font-size: 1.8rem;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 2.4rem;
   }
-
-  /* * skills sec */
-
   .skills {
-    display: flex;
     justify-content: center;
     margin-top: 9.6rem;
     flex-direction: column;
     align-items: center;
-    width: 160rem;
   }
   .skills .skills-info .row {
     gap: 5.8rem;
@@ -824,60 +812,49 @@ body.dark-mode .sec-btn {
     align-items: center;
     justify-content: center;
   }
-
-  /** experience */
   .experience {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    width: 160rem;
   }
   .exp-card {
     width: 89.6rem;
     height: 28.8rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-    border-radius: 1.2rem;
-    margin-bottom: 5rem;
   }
   .exp-card .card-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 3.2rem;
+    margin: 0 3.2rem 3.2rem;
     gap: 4.8rem;
-    margin-top: 0;
   }
   .exp-title {
     display: flex;
     flex-direction: column;
-    position: relative;
     left: -10rem;
   }
   .exp-card .card-content .exp-title h2 {
     margin: 1.6rem 0;
     font-size: 2rem;
   }
-
   .exp-card .card-content .exp-img {
     max-width: 10.2rem;
     height: 10.2rem;
     position: relative;
-    left: 0rem;
+    left: 0;
     margin-top: 4rem;
   }
   .exp-card .card-content .exp-img img {
     object-fit: contain;
   }
-
   .exp-card .exp-img img {
     object-fit: cover;
     width: 13.2rem;
   }
   .date p {
     font-size: 1.6rem;
-    position: relative;
     right: -60rem;
     top: 2rem;
   }
@@ -885,8 +862,7 @@ body.dark-mode .sec-btn {
     font-size: 1.6rem;
     margin-bottom: 0.4rem;
   }
-
-  /* * projects  */
+  .contact,
   .project {
     display: flex;
     flex-direction: column;
@@ -897,24 +873,19 @@ body.dark-mode .sec-btn {
     width: 115.2rem;
     height: 48rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-    border-radius: 1.2rem;
-    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
   }
-
   .pro-card .card-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 3.2rem;
   }
-
   .pro-card .card-content .pro-img {
     min-width: 49rem;
     max-height: 36rem;
-    padding: 3.2rem 0;
-    padding-right: 3rem;
+    padding: 3.2rem 3rem 3.2rem 0;
     border-radius: 3rem;
     background-color: transparent !important;
     margin-right: 5rem;
@@ -923,29 +894,23 @@ body.dark-mode .sec-btn {
   .pro-card .card-content .pro-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* make image fill container without stretching */
+    object-fit: cover;
     display: inline-block;
   }
-
   .pro-img {
     overflow: hidden;
   }
-
   .pro-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
-
   .pro-info {
     margin-top: 3.2rem;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-  }
-  .pro-info p {
-    font-size: 2rem;
   }
   .pro-tech {
     display: flex;
@@ -958,38 +923,19 @@ body.dark-mode .sec-btn {
     font-size: 1.6rem;
     width: fit-content;
     object-fit: contain;
-    border-radius: 1.2rem;
     background-color: #4b556320;
-    display: inline-block; /* Important so they line up similar to buttons */
+    display: inline-block;
   }
   .pro-info a {
     font-size: 2rem;
-    position: relative;
     bottom: 2rem;
   }
-
-  /* * contact me */
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 160rem;
-  }
-
   .contact .card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 3.2rem;
-    margin-top: 0;
+    margin: 0 3.2rem 3.2rem;
   }
-
-  .card-content .contact2 .email p,
-  .phone p {
-    font-size: 3rem;
-    font-weight: 500;
-  }
-
   .card-content .contact2 .email,
   .card-content .contact2 .phone {
     display: flex;
@@ -997,14 +943,6 @@ body.dark-mode .sec-btn {
     justify-content: center;
     gap: 0.5rem;
   }
-  .card-content .contact2 .email i {
-    font-size: 2rem;
-  }
-
-  .card-content .contact2 .phone i {
-    font-size: 2rem;
-  }
-
   .card-content .platforms {
     font-size: 3rem;
     text-align: center;
@@ -1014,59 +952,65 @@ body.dark-mode .sec-btn {
     font-size: 4rem;
     gap: 1rem;
   }
-
   .contact-form {
     font-size: 2.5rem !important;
   }
-
-  .hero,
   .about-me,
-  .skills,
+  .contact,
   .experience,
+  .hero,
   .project,
-  .contact {
+  .skills {
     margin-bottom: 15rem;
   }
 }
-
-/* !-------------------------------------------------------- */
-/* ! media for screens up to 1440px */
 @media (min-width: 1025px) and (max-width: 1440px) {
+  .about-me,
+  .contact,
+  .experience,
+  .nav-item i,
+  .project,
+  .skills {
+    position: relative;
+  }
+  .nav-item a,
+  .sec-btn {
+    text-decoration: none;
+  }
+  .img2 .my-img,
+  .introduction .my-img {
+    background: rgba(128, 128, 128, 0.251);
+    width: 40rem;
+  }
   .container {
     min-width: 80% !important;
     margin: 0 auto;
   }
-
   body {
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
   }
-
   .section {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
+  .platforms p,
+  .pro-info a,
   .section p {
     font-size: 2rem;
   }
-
-  /* * skills sec */
-
   .skills-info .row .col-2 i {
     font-size: 10rem;
   }
-
   header {
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
   }
-
   .home-bg {
     width: 180rem;
   }
-
   .navbar-brand img:hover {
     transform: scale(1.25);
   }
@@ -1079,35 +1023,28 @@ body.dark-mode .sec-btn {
     margin-top: 1rem;
     margin-left: 1rem;
     font-size: 1.8rem;
-    position: relative;
   }
-
-  .navbar-brand,
   .nav-item,
+  .navbar-brand,
   .navbar-toggler-icon {
     font-size: 2rem;
     font-weight: 500;
   }
-
   .collapse ul .button {
     width: fit-content;
     height: fit-content;
     font-size: 1.6rem;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     margin-left: 3.2rem;
     border-radius: 1.2rem;
     padding: 0.5rem;
   }
-  .nav-item a {
-    text-decoration: none;
-  }
   .navbar-toggler {
     border: none;
   }
-
   .introduction {
-    margin: 6.4rem 1.6rem 0rem 1.6rem;
+    margin: 6.4rem 1.6rem 0;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -1116,27 +1053,24 @@ body.dark-mode .sec-btn {
     width: 160rem;
     padding-right: 14rem;
   }
+  .address,
+  .intro {
+    margin-top: 4.8rem;
+  }
   .introduction .my-img {
     padding-left: 18rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    border-radius: 0.8rem; /* Optional rounded corners */
-    width: 40rem;
+    border-radius: 0.8rem;
     height: 26rem;
   }
-
   .introduction .my-img .img img {
     width: 26rem;
     height: 28rem;
     object-fit: cover;
     margin-top: -4rem;
     margin-left: -17rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
     position: absolute;
-  }
-
-  .intro {
-    margin-top: 4.8rem;
   }
   .intro h2 {
     font-size: 7rem;
@@ -1144,66 +1078,59 @@ body.dark-mode .sec-btn {
   }
   .intro p {
     font-size: 2.5rem;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 2.4rem;
   }
-
   .address {
-    margin-top: 4.8rem;
     margin-left: 1.6rem;
   }
-  .location,
-  .available {
+  .available,
+  .location {
     display: flex;
     align-items: baseline;
     gap: 1rem;
   }
-  .location p,
-  .available p {
+  .pro-tech span,
+  .sec-btn {
+    width: fit-content;
+    display: inline-block;
+  }
+  .available p,
+  .location p {
     font-size: 1.9rem;
   }
   .location i {
     font-size: 1.8rem;
   }
-  .available i {
+  .available i,
+  .exp-title ul li {
     font-size: 1.6rem;
   }
-
   .sociol-icons {
     font-size: 2.8rem;
     margin-left: 1.6rem;
   }
-
   .sociol-icons i {
     padding-right: 0.4rem;
   }
-
-  .about-me,
-  .skills,
-  .experience,
-  .project,
-  .contact {
-    position: relative;
-  }
-
-  /* *section about me */
   .sec-btn {
-    display: inline-block; /* so it only takes as much space as needed */
-    margin-bottom: 2.6rem; /* matches your original margin */
-    padding: 0.5rem 1rem; /* adjust for more/less space inside the box */
-    border-radius: 1.2rem; /* rounded corners */
+    margin-bottom: 2.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
-    width: fit-content; /* shrink-to-fit */
-    text-decoration: none; /* remove underline if it’s an <a> */
-    box-sizing: border-box; /* helps control padding/width combos */
+    box-sizing: border-box;
     background-color: #e5e7eb;
     color: #4b5563;
     position: absolute;
     top: 0;
   }
-
+  .date p,
+  .exp-title,
+  .hero-img {
+    position: relative;
+  }
   .title-sec {
     margin-top: 5rem;
     margin-bottom: 3rem;
@@ -1212,105 +1139,99 @@ body.dark-mode .sec-btn {
   .about-me {
     display: flex;
     flex-direction: row;
-    /* width: 128rem; */
     gap: 4.8rem;
     align-content: center;
     justify-content: center;
     width: 170rem;
   }
+  .exp-title,
+  .skills {
+    flex-direction: column;
+  }
   .hero-img {
-    position: relative;
     left: -140px;
   }
   .img2 .my-img {
     padding-left: 20rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    border-radius: 0.8rem; /* Optional rounded corners */
-    width: 40rem;
+    border-radius: 0.8rem;
     height: 45rem;
     margin-top: 20rem;
   }
-
   .img2 .my-img .img img {
     width: 35rem;
     height: 48rem;
     object-fit: cover;
     margin-top: -5.5rem;
     margin-left: -17rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
     position: absolute;
+  }
+  .exp-card,
+  .pro-card,
+  .pro-tech span {
+    border-radius: 1.2rem;
   }
   .Curious {
     margin-top: 8rem;
     width: 584px;
   }
+  .experience,
+  .skills {
+    width: 170rem;
+    display: flex;
+  }
   .Curious h2 {
     font-size: 3.3rem;
     font-weight: 500;
   }
+  .Curious .cer ul,
   .Curious p {
     font-size: 2.2rem;
-    font-weight: normal;
+    font-weight: 400;
+  }
+  .Curious p {
     line-height: 3.6rem;
     letter-spacing: -2%;
   }
-
   .Curious .cer ul {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
-    font-size: 2.2rem;
-    font-weight: normal;
     line-height: 2.4rem;
   }
-
-  /* * skills sec */
-
   .skills {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 9.6rem;
-    margin-bottom: 3rem;
-    width: 170rem;
   }
   .skills .skills-info .row {
-    gap: 5rem;
+    gap: 3.5rem;
     margin-top: 5rem;
     align-items: center;
     justify-content: center;
   }
-
-  /** experience */
   .experience {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    width: 170rem;
   }
   .exp-card {
     width: 89.6rem;
     height: 28.8rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-    border-radius: 1.2rem;
     margin-bottom: 5rem;
   }
   .exp-card .card-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 3.2rem;
+    margin: 0 3.2rem 3.2rem;
     gap: 4.8rem;
-    margin-top: 0;
   }
   .exp-title {
     display: flex;
-    flex-direction: column;
-    position: relative;
     width: 38.4rem;
     left: -10rem;
   }
@@ -1318,7 +1239,6 @@ body.dark-mode .sec-btn {
     margin: 1.6rem 0;
     font-size: 2.4rem;
   }
-
   .exp-card .card-content .exp-img {
     max-width: 10.2rem;
     height: 10.2rem;
@@ -1330,26 +1250,20 @@ body.dark-mode .sec-btn {
     object-fit: contain;
     width: 22rem;
   }
-
   .exp-card .exp-img img {
     object-fit: cover;
     width: 10.2rem;
   }
   .date p {
     font-size: 1.8rem;
-    position: relative;
     right: -53rem;
     top: 2rem;
   }
   .exp-title ul li {
-    font-size: 1.6rem;
     margin-bottom: 0.4rem;
-    font-family: "Inter";
+    font-family: Inter;
     line-height: 2.4rem;
   }
-
-  /* * projects  */
-
   .project {
     display: flex;
     flex-direction: column;
@@ -1360,24 +1274,25 @@ body.dark-mode .sec-btn {
     width: 115.2rem;
     height: 48rem;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-    border-radius: 1.2rem;
     margin-bottom: 5rem;
     display: flex;
     justify-content: center;
   }
-
   .pro-card .card-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 3.2rem;
   }
-
+  .contact,
+  .pro-info {
+    flex-direction: column;
+    display: flex;
+  }
   .pro-card .card-content .pro-img {
     min-width: 48rem;
     max-height: 36rem;
-    padding: 3.2rem 0;
-    padding-right: 3rem;
+    padding: 3.2rem 3rem 3.2rem 0;
     border-radius: 3rem;
     background-color: transparent !important;
     margin-right: 5rem;
@@ -1386,16 +1301,12 @@ body.dark-mode .sec-btn {
   .pro-card .card-content .pro-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* make image fill container without stretching */
+    object-fit: cover;
   }
-
   .pro-info {
     margin-top: 3.2rem;
-    display: flex;
-    flex-direction: column;
     gap: 2.4rem;
   }
-
   .pro-info h3 {
     font-size: 2.4rem;
     font-weight: 500;
@@ -1413,42 +1324,27 @@ body.dark-mode .sec-btn {
   .pro-tech span {
     padding: 0.4rem 2rem;
     font-size: 1.9rem;
-    width: fit-content;
     object-fit: contain;
-    border-radius: 1.2rem;
     background-color: #4b556320;
-    display: inline-block; /* Important so they line up similar to buttons */
   }
-  .pro-info a {
-    font-size: 2rem;
-  }
-
-  /* * contact me */
   .contact-form {
     font-size: 2.2rem !important;
   }
-
   .contact {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     width: 165rem;
   }
-
   .contact .card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 3.2rem;
-    margin-top: 0;
+    margin: 0 3.2rem 3.2rem;
   }
-
   .card-content .contact2 .email p,
   .phone p {
     font-size: 3.8rem;
     font-weight: 500;
   }
-
   .card-content .contact2 .email,
   .card-content .contact2 .phone {
     display: flex;
@@ -1460,62 +1356,70 @@ body.dark-mode .sec-btn {
   .card-content .contact2 .phone i {
     font-size: 3.5rem;
   }
-
   .card-content .platforms {
     font-size: 3.5rem;
     text-align: center;
-  }
-  .platforms p {
-    font-size: 2rem;
   }
   .card-content .platforms .icoo {
     text-align: center;
     font-size: 2.4rem;
     gap: 1rem;
   }
-
-  .hero,
   .about-me,
-  .skills,
+  .contact,
   .experience,
+  .hero,
   .project,
-  .contact {
+  .skills {
     margin-bottom: 15rem;
   }
 }
-
-/* !--------------------------------------------------------- */
 @media (min-width: 1441px) and (max-width: 2560px) {
+  .about-me,
+  .contact,
+  .experience,
+  .nav-item a .btn,
+  .nav-item i,
+  .project,
+  .skills {
+    position: relative;
+  }
+  .img2 .my-img,
+  .introduction .my-img {
+    background: rgba(128, 128, 128, 0.251);
+    width: 40rem;
+  }
+  .nav-item a,
+  .nav-item a .btn,
+  .pro-info a,
+  .sec-btn {
+    text-decoration: none;
+  }
   .container {
     min-width: 80% !important;
     margin: 0 auto;
   }
-
   html {
     scroll-behavior: smooth;
   }
-
   body {
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
   }
-
   .section {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-
+  .platforms p,
   .section p {
     font-size: 2rem;
   }
-
   header {
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
   }
-
   .navbar-brand img:hover {
     transform: scale(1.25);
   }
@@ -1529,42 +1433,33 @@ body.dark-mode .sec-btn {
     margin-right: 1rem;
     top: 0.46rem;
     font-size: 1.8rem;
-    position: relative;
     cursor: pointer;
   }
-
-  .navbar-brand,
   .nav-item,
-  .navbar-toggler-icon {
+  .navbar-brand,
+  .navbar-toggler-icon,
+  .pro-info h3 {
     font-size: 2rem;
     font-weight: 500;
   }
-
   .collapse ul .button {
     width: fit-content;
     height: fit-content;
     font-size: 1.6rem;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     margin-left: 3.2rem;
     border-radius: 1.2rem;
     padding: 0.5rem;
   }
-  .nav-item a {
-    text-decoration: none;
-  }
   .nav-item a .btn {
-    text-decoration: none;
-    position: relative;
     top: 0.3rem;
   }
-
   .navbar-toggler {
     border: none;
   }
-
   .introduction {
-    margin: 6.4rem 1.6rem 0rem 1.6rem;
+    margin: 6.4rem 1.6rem 0;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -1572,25 +1467,25 @@ body.dark-mode .sec-btn {
     gap: 4.8rem;
     width: 128rem;
   }
+  .address,
+  .sociol-icons {
+    margin-left: 1.6rem;
+  }
   .introduction .my-img {
     padding-left: 18rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-    border-radius: 0.8rem; /* Optional rounded corners */
-    width: 40rem;
+    border-radius: 0.8rem;
     height: 26rem;
   }
-
   .introduction .my-img .img img {
     width: 26rem;
     height: 28rem;
     object-fit: cover;
     margin-top: -4rem;
     margin-left: -17rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
     position: absolute;
   }
-
   .intro {
     margin-top: 4.8rem;
   }
@@ -1600,21 +1495,22 @@ body.dark-mode .sec-btn {
   }
   .intro p {
     font-size: 2rem;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 2.4rem;
   }
-
-  .address {
-    margin-left: 1.6rem;
-  }
-  .location,
-  .available {
+  .available,
+  .location {
     display: flex;
     align-items: baseline;
     gap: 1rem;
   }
-  .location p,
-  .available p {
+  .pro-tech span,
+  .sec-btn {
+    width: fit-content;
+    display: inline-block;
+  }
+  .available p,
+  .location p {
     font-size: 1.9rem;
   }
   .location i {
@@ -1623,78 +1519,79 @@ body.dark-mode .sec-btn {
   .available i {
     font-size: 1.6rem;
   }
-
   .sociol-icons {
     font-size: 2.8rem;
-    margin-left: 1.6rem;
   }
-
   .sociol-icons i {
     padding-right: 0.4rem;
   }
-
-  .about-me,
-  .skills,
-  .experience,
-  .project,
-  .contact {
-    position: relative;
-  }
-
-  /* *section about me */
   .sec-btn {
-    display: inline-block; /* so it only takes as much space as needed */
-    margin-bottom: 2.6rem; /* matches your original margin */
-    padding: 0.5rem 1rem; /* adjust for more/less space inside the box */
-    border-radius: 1.2rem; /* rounded corners */
+    margin-bottom: 2.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
     font-size: 1.7rem;
     font-weight: 500;
     text-align: center;
-    width: fit-content; /* shrink-to-fit */
-    text-decoration: none; /* remove underline if it’s an <a> */
-    box-sizing: border-box; /* helps control padding/width combos */
+    box-sizing: border-box;
     background-color: #e5e7eb;
     color: #4b5563;
     position: absolute;
     top: 0;
   }
-
+  .date p,
+  .exp-title,
+  .hero-img {
+    position: relative;
+  }
   .title-sec {
     margin-top: 5rem;
     margin-bottom: 3rem;
     font-size: 2.4rem;
   }
+  .exp-card,
+  .pro-card {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5rem;
+  }
   .about-me {
     display: flex;
     flex-direction: row;
-
     gap: 4.8rem;
     align-content: center;
     justify-content: center;
   }
+  .exp-title,
+  .skills {
+    flex-direction: column;
+    display: flex;
+  }
   .hero-img {
-    position: relative;
     left: -140px;
   }
   .img2 .my-img {
     padding-left: 20rem;
-    background: rgba(128, 128, 128, 0.251); /* Matches the border */
-
-    border-radius: 0.8rem; /* Optional rounded corners */
-    width: 40rem;
+    border-radius: 0.8rem;
     height: 45rem;
     margin-top: 20rem;
   }
-
   .img2 .my-img .img img {
     width: 35rem;
     height: 48rem;
     object-fit: cover;
     margin-top: -5.5rem;
     margin-left: -17rem;
-    border: 0.8rem solid white;
-    border-radius: 0.8rem; /* Optional rounded corners */
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
     position: absolute;
+  }
+  .exp-card .card-content .exp-img img,
+  .pro-tech span {
+    object-fit: contain;
+  }
+  .exp-card,
+  .pro-card,
+  .pro-tech span {
+    border-radius: 1.2rem;
   }
   .Curious {
     margin-top: 8rem;
@@ -1704,74 +1601,56 @@ body.dark-mode .sec-btn {
     font-size: 3rem;
     font-weight: 500;
   }
+  .Curious .cer ul,
   .Curious p {
     font-size: 1.6rem;
-    font-weight: normal;
+    font-weight: 400;
+  }
+  .Curious p {
     line-height: 3.6rem;
     letter-spacing: -2%;
   }
-
   .Curious .cer ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
-    font-size: 1.6rem;
-    font-weight: normal;
     line-height: 2.4rem;
   }
-
-  /* * skills sec */
-
   .skills {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 9.6rem;
-    margin-bottom: 3rem;
   }
   .skills .skills-info .row {
-    gap: 5rem;
+    gap: 3.5rem;
     margin-top: 5rem;
     align-items: center;
     justify-content: center;
   }
   .skills-info .row .col-2 i {
-    font-size: 10rem;
+    font-size: 9rem;
   }
-
   .skills-info .row .col-2 i:hover {
-    filter: drop-shadow(0 0 0.75rem #8c97a2);
+    filter: drop-shadow(0 0 0.75rem #5d5e5f94);
   }
-
-  /** experience */
   .experience {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin-bottom: 20rem;
   }
   .exp-card {
     width: 89.6rem;
     height: fit-content;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-    border-radius: 1.2rem;
-    margin-bottom: 5rem;
   }
-
   .exp-card .card-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 3.2rem;
+    margin: 0 3.2rem 3.2rem;
     gap: 4.8rem;
-    margin-top: 0;
   }
   .exp-title {
-    display: flex;
-    flex-direction: column;
-    position: relative;
     width: 38.4rem;
     left: -10rem;
   }
@@ -1783,7 +1662,6 @@ body.dark-mode .sec-btn {
     font-size: 1.23rem;
     font-weight: 500;
   }
-
   .exp-card .card-content .exp-img {
     max-width: 10.2rem;
     height: 10.2rem;
@@ -1791,29 +1669,25 @@ body.dark-mode .sec-btn {
     left: -10rem;
     margin-top: 4rem;
   }
-  .exp-card .card-content .exp-img img {
-    object-fit: contain;
-  }
-
   .exp-card .exp-img img {
     object-fit: cover;
     width: 22rem;
   }
   .date p {
     font-size: 1.8rem;
-    position: relative;
     right: -50rem;
     top: 2rem;
   }
-  .exp-title ul li {
+  .exp-title ul li,
+  .pro-info p {
     font-size: 1.6rem;
-    margin-bottom: 0.4rem;
-    font-family: "Inter";
     line-height: 2.4rem;
   }
-
-  /* * projects  */
-
+  .exp-title ul li {
+    margin-bottom: 0.4rem;
+    font-family: Inter;
+  }
+  .contact,
   .project {
     display: flex;
     flex-direction: column;
@@ -1822,27 +1696,20 @@ body.dark-mode .sec-btn {
   .pro-card {
     width: 115.2rem;
     height: 48rem;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-    border-radius: 1.2rem;
-    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
   }
-
   .pro-card .card-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 3.2rem;
   }
-
   .pro-card .card-content .pro-img {
     min-width: 47.5rem;
     max-height: 36rem;
-    padding: 3.2rem 0;
-    padding-left: 0.5rem;
+    padding: 3.2rem 3rem 3.2rem 0.5rem;
     margin-right: 5rem;
-    padding-right: 3rem;
     border-radius: 3rem;
     background-color: transparent !important;
     box-shadow: 0 10px 15px rgba(5, 5, 5, 0.042);
@@ -1850,27 +1717,16 @@ body.dark-mode .sec-btn {
   .pro-card .card-content .pro-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* make image fill container without stretching */
+    object-fit: cover;
   }
-
   .pro-info {
     margin-top: 3.2rem;
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
   }
-
-  .pro-info h3 {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  .pro-info p {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-  }
   .pro-info a {
     font-size: large;
-    text-decoration: none;
   }
   .pro-tech {
     display: flex;
@@ -1881,34 +1737,19 @@ body.dark-mode .sec-btn {
   .pro-tech span {
     padding: 0.4rem 2rem;
     font-size: 1.4rem;
-    width: fit-content;
-    object-fit: contain;
-    border-radius: 1.2rem;
     background-color: #4b556320;
-    display: inline-block; /* Important so they line up similar to buttons */
   }
-
-  /* * contact me */
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .contact .card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 3.2rem;
-    margin-top: 0;
+    margin: 0 3.2rem 3.2rem;
   }
-
   .card-content .contact2 .email p,
   .phone p {
     font-size: 3.5rem;
     font-weight: 500;
   }
-
   .card-content .contact2 .email,
   .card-content .contact2 .phone {
     display: flex;
@@ -1920,26 +1761,21 @@ body.dark-mode .sec-btn {
   .card-content .contact2 .phone i {
     font-size: 3rem;
   }
-
   .card-content .platforms {
     font-size: 3rem;
     text-align: center;
-  }
-  .platforms p {
-    font-size: 2rem;
   }
   .card-content .platforms .icoo {
     text-align: center;
     font-size: 2rem;
     gap: 1rem;
   }
-
-  .hero,
   .about-me,
-  .skills,
+  .contact,
   .experience,
+  .hero,
   .project,
-  .contact {
+  .skills {
     margin-bottom: 15rem;
   }
 }
