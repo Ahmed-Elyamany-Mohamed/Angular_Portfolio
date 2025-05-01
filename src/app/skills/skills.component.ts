@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -7,7 +7,35 @@ import { Component } from '@angular/core';
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css',
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
+  isHovering = false;
+  hoveredSkill: string | null = null;
+  clickedSkill: string | null = null;
+  isMobile: boolean = false;
+
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth <= 768;
+    console.log(`isMobile: ${this.isMobile}`);
+  }
+
+  onMouseEnter(skillName: string): void {
+    if (!this.isMobile) {
+      this.hoveredSkill = skillName;
+    }
+  }
+
+  onMouseLeave(): void {
+    if (!this.isMobile) {
+      this.hoveredSkill = null;
+    }
+  }
+
+  toggleClick(skillName: string): void {
+    if (this.isMobile) {
+      this.clickedSkill = this.clickedSkill === skillName ? null : skillName;
+    }
+  }
+
   skills = [
     // ! for fontawesome icons
     // { icon: 'fa-html5', color: 'rgb(253, 95, 32)', name: 'HTML5' },

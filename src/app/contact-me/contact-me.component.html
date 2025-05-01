@@ -18,8 +18,8 @@
       <form class="fs-3 contact-form" [formGroup]="myForm">
         <div class="mb-3">
           <label for="name" class="form-label fw-semibold"
-            >Your Name <span class="asterisk">*</span></label
-          >
+            >Your Name <span class="asterisk">*</span>
+          </label>
           <input
             type="text"
             class="form-control form-control-lg"
@@ -75,6 +75,8 @@
             class="form-control form-control-lg"
             id="message"
             rows="4"
+            cols="4"
+            style="resize: none"
             placeholder="Write your message here..."
             required
             formControlName="message"

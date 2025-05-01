@@ -1,9 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { SafeLinkDirective } from '../directives/safe-link.directive';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'app-hero',
-  imports: [SafeLinkDirective],
+  imports: [SafeLinkDirective, CommonModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })
@@ -11,6 +13,7 @@ export class HeroComponent implements OnInit {
   disableClick(event: MouseEvent) {
     event.preventDefault();
   }
+  
   words: string[] = [' Developer.', ' Designer.', ' Creator.'];
   currentWordIndex: number = 0;
   currentCharIndex: number = 0;
@@ -36,14 +39,14 @@ export class HeroComponent implements OnInit {
 
     if (!this.isDeleting && this.currentCharIndex === currentWord.length) {
       this.isDeleting = true;
-      setTimeout(() => this.typeEffect(), 1000);
+      setTimeout(() => this.typeEffect(), 7000);
       return;
     } else if (this.isDeleting && this.currentCharIndex === 0) {
       this.isDeleting = false;
       this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
     }
 
-    const typingSpeed: number = this.isDeleting ? 100 : 150;
+    const typingSpeed: number = this.isDeleting ? 150 : 200;
     setTimeout(() => this.typeEffect(), typingSpeed);
   }
 

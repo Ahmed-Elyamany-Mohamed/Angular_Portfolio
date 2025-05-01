@@ -157,6 +157,15 @@ html {
 .section {
   background-color: rgba(30, 42, 92, 0.732) !important;
 }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.navbar-brand img:hover {
+  transform: scale(1.25);
+}
 .navbar {
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -167,6 +176,31 @@ html {
 }
 .navbar-toggler {
   border: none;
+}
+/* ! works with dark */
+.body.dark-mode .intro h2 {
+  background: linear-gradient(90deg, #0d0d0d, #fff, #0d0d0d);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: sombra 4.5s linear infinite alternate;
+}
+.intro h2 {
+  background: linear-gradient(90deg, #ffffff, #0d0d0d, #ffffff);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: sombra 4.5s linear infinite alternate;
+}
+@keyframes sombra {
+  0% {
+    background-position: 300%;
+  }
+  100% {
+    background-position: -300%;
+  }
 }
 .pro-tech span {
   padding: 0.4rem 2rem;
@@ -258,10 +292,21 @@ body.dark-mode .card {
 body.dark-mode .card input,
 body.dark-mode .card textarea {
   background-color: #111624d8;
+  color: whitesmoke;
+  font-size: 15px;
 }
-body.dark-mode .card,
-body.dark-mode .card ::placeholder {
+.card input,
+.card textarea {
+  background-color: #f5f5f5;
+  color: black;
+  font-size: 15px;
+}
+body.dark-mode .card {
   color: #fff;
+}
+
+body.dark-mode .card ::placeholder {
+  color: #ffffff63;
 }
 body.dark-mode .card :disabled {
   color: #8c97a2;
@@ -1006,18 +1051,6 @@ body.dark-mode .sec-btn {
   .skills-info .row .col-2 i {
     font-size: 10rem;
   }
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-  }
-  .home-bg {
-    width: 180rem;
-  }
-  .navbar-brand img:hover {
-    transform: scale(1.25);
-  }
   .navbar {
     margin-top: 1rem;
     font-size: 3rem;
@@ -1418,15 +1451,7 @@ body.dark-mode .sec-btn {
   .section p {
     font-size: 2rem;
   }
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-  }
-  .navbar-brand img:hover {
-    transform: scale(1.25);
-  }
+
   .navbar {
     margin-top: 1rem;
     font-size: 3rem;
@@ -1632,9 +1657,6 @@ body.dark-mode .sec-btn {
   }
   .skills-info .row .col-2 i {
     font-size: 9rem;
-  }
-  .skills-info .row .col-2 i:hover {
-    filter: drop-shadow(0 0 0.75rem #5d5e5f94);
   }
   .experience {
     display: flex;

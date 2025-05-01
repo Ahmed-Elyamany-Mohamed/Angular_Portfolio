@@ -1,0 +1,67 @@
+.skills-icons i {
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+.skills-icons.icon-hovering i {
+  filter: blur(3px);
+  opacity: 0.4;
+}
+.skills-icons.icon-hovering i:hover {
+  filter: none;
+  opacity: 1;
+}
+/* 
+.skills-icons .tooltip {
+  position: absolute;
+  margin-top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #111;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0.95;
+} */
+
+.skills-icons .tooltip {
+  position: absolute;
+  top: auto; /* place it just below the icon */
+  left: auto;
+  transform: translateX(190%);
+  margin-top: 6px;
+
+  background-color: #111;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0.95;
+}
+
+.skills-icons .tooltip.mobile {
+  position: absolute;
+  top: auto; /* place it just below the icon */
+  left: auto;
+  transform: translateX(50%);
+  margin-top: 6px;
+
+  background-color: #111;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0.95;
+}

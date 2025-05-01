@@ -22,7 +22,8 @@
       "default",
       {
         "ignore": [
-          "user-select"
+          "user-select",
+          "mask-image"
         ]
       }
     ]
