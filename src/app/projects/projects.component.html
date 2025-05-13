@@ -1,3 +1,40 @@
+<!-- <section class="project-stack" id="project">
+  <span class="sec-btn">Projects</span>
+  <div class="title-sec">
+    <p>Some of the noteworthy projects I have built:</p>
+  </div>
+
+  <div class="navigation-arrows">
+    <button (click)="goToPreviousProject()" [disabled]="currentIndex === 0">
+      ←
+    </button>
+    <button
+      (click)="goToNextProject()"
+      [disabled]="currentIndex === projects.length - 1"
+    >
+      →
+    </button>
+  </div>
+
+  <div class="stack-wrapper">
+    <div class="stack-card" *ngIf="projects[currentIndex]">
+      <img
+        [src]="projects[currentIndex].image_url || 'assets/projects/1.png'"
+        alt="Project Image"
+      />
+      <div class="info">
+        <h3>{{ projects[currentIndex].title }}</h3>
+        <p>{{ projects[currentIndex].description }}</p>
+        <div class="pro-tech">
+          <span *ngFor="let tech of projects[currentIndex].tech">{{
+            tech
+          }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
 <!-- * projects  -->
 
 <section class="project" data-aos="fade-up" id="project" #projectCard>

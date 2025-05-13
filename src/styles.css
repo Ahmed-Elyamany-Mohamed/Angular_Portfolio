@@ -136,6 +136,9 @@ body.dark-mode .animated-text {
   content: "\e91c";
   color: #5c2d91;
 }
+.icon-chain-broken:before {
+  content: "\f127";
+}
 body {
   overflow-x: hidden;
   transition: 0.4s linear;
@@ -339,6 +342,29 @@ body.dark-mode .navbar .nav-item a {
 }
 body.dark-mode .navbar .nav-item .dark i {
   font-size: 0;
+}
+body.dark-mode .exp-title a {
+  text-decoration: none;
+  font-size: 15px;
+  color: whitesmoke !important;
+}
+
+body.dark-mode .exp-title .btn {
+  background-color: #11162430;
+  color: whitesmoke;
+}
+
+body.dark-mode .exp-title a:hover {
+  color: whitesmoke;
+}
+
+body.dark-mode .exp-title .btn:hover {
+  background-color: whitesmoke !important;
+  color: black;
+}
+
+body.dark-mode .exp-title .btn:hover a {
+  color: black !important;
 }
 body.dark-mode .sec-btn {
   background-color: #374151;
@@ -869,14 +895,14 @@ body.dark-mode .sec-btn {
   }
   .exp-card {
     width: 89.6rem;
-    height: 28.8rem;
+    height: fit-content;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
   }
   .exp-card .card-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 3.2rem 3.2rem;
+    margin: 0 4rem 4rem;
     gap: 4.8rem;
   }
   .exp-title {
@@ -894,6 +920,7 @@ body.dark-mode .sec-btn {
     position: relative;
     left: 0;
     margin-top: 4rem;
+    margin-right: 4rem;
   }
   .exp-card .card-content .exp-img img {
     object-fit: contain;
@@ -1256,7 +1283,7 @@ body.dark-mode .sec-btn {
   }
   .exp-card {
     width: 89.6rem;
-    height: 28.8rem;
+    height: fit-content;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
     margin-bottom: 5rem;
   }

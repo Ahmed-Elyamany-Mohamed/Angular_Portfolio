@@ -1,0 +1,72 @@
+/* .project-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.stack-wrapper {
+  width: 100%;
+  max-width: 400px;
+  min-height: 500px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.stack-card {
+  width: 100%;
+  height: 100%;
+  background: #2d2d2d;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding-bottom: 20px;
+}
+
+.stack-card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.stack-card .info {
+  padding: 16px;
+  font-size: 16px;
+}
+
+.pro-tech {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pro-tech span {
+  background: #444;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.navigation-arrows button {
+  padding: 6px 12px;
+  font-size: 20px;
+  background: #2d2d2d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navigation-arrows button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+} */

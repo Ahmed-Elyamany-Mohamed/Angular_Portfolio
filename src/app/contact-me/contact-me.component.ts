@@ -26,12 +26,10 @@ export class ContactMeComponent {
   isLoading = false;
   showToast = false;
   toastMessage = '';
-
   constructor() {
     this.initFormControl();
     this.createForm();
   }
-
   initFormControl() {
     this.name = new FormControl('', [
       Validators.required,
@@ -45,7 +43,6 @@ export class ContactMeComponent {
     this.subject = new FormControl('', [Validators.required]);
     this.message = new FormControl('', [Validators.required]);
   }
-
   createForm() {
     this.myForm = new FormGroup({
       name: this.name,
@@ -55,7 +52,6 @@ export class ContactMeComponent {
       message: this.message,
     });
   }
-
   onSubmit() {
     this.submitted = true;
 

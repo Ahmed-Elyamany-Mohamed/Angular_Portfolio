@@ -28,4 +28,37 @@ export class ProjectsComponent implements OnInit {
       this.projects = data;
     });
   }
+
+  // selectedProjectIndex: number | null = null;
+
+  // selectProject(index: number) {
+  //   this.selectedProjectIndex =
+  //     this.selectedProjectIndex === index ? null : index;
+  // }
+
+  // getCardTransform(index: number): string {
+  //   const translateX = index * -60; // Horizontal shift
+  //   const translateZ = index * -40; // Depth shift
+  //   const rotateY = -5; // Subtle tilt (optional)
+
+  //   if (this.selectedProjectIndex === index) {
+  //     return `translateZ(100px) translateX(0px) scale(1.1)`;
+  //   }
+
+  //   return `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg)`;
+  // }
+
+  // currentIndex = 0;
+
+  // goToNextProject() {
+  //   if (this.currentIndex < this.projects.length - 1) {
+  //     this.currentIndex++;
+  //   }
+  // }
+
+  // goToPreviousProject() {
+  //   if (this.currentIndex > 0) {
+  //     this.currentIndex--;
+  //   }
+  // }
 }

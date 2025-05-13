@@ -13,25 +13,6 @@
   filter: none;
   opacity: 1;
 }
-/* 
-.skills-icons .tooltip {
-  position: absolute;
-  margin-top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  background-color: #111;
-  color: white;
-  width: fit-content;
-  height: fit-content;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 6px;
-  white-space: nowrap;
-  z-index: 10;
-  opacity: 0.95;
-} */
-
 .skills-icons .tooltip {
   position: absolute;
   top: auto; /* place it just below the icon */

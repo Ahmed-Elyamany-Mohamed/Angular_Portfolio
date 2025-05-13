@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ExperienceService } from '../services/experience.service';
 import { CommonModule } from '@angular/common';
+import { SafeLinkDirective } from '../directives/safe-link.directive';
 
 @Component({
   selector: 'app-experience',
-  imports: [CommonModule],
+  imports: [CommonModule, SafeLinkDirective],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css',
 })
