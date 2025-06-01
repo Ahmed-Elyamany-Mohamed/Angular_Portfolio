@@ -8,7 +8,7 @@
       "Mastered the use of SharePoint for online collaboration and content management."
     ],
     "image_url": "assets/experience/Global-Group.webp",
-    "data": "18-10-2023",
+    "date": "2023-10-18",
     "link": "https://drive.google.com/file/d/1QNdrEf43tpf9Vz6fjgANGkbtzgWOfcBE/view?usp=drivesdk"
   },
   {
@@ -19,7 +19,7 @@
       "Integrated Firebase for real-time database operations and user authentication."
     ],
     "image_url": "assets/experience/next-academy-logo.png",
-    "data": "27-8-2023",
+    "date": "2023-08-27",
     "link": "https://drive.google.com/file/d/1StOtcEPFDzeoDneDUr3kdE3_MOpnGy60/view?usp=drivesdk"
   },
   {
@@ -31,7 +31,7 @@
       "Explored the use of NVIDIA tools for developing AI models and applications."
     ],
     "image_url": "assets/experience/nvidia-logo-16.png",
-    "data": "10-8-2022",
+    "date": "2022-08-10",
     "link": "https://drive.google.com/file/d/14uCzWm34jcoRFzJ3iPzyJl8NW0Jaho9H/view?usp=drivesdk"
   },
   {
@@ -42,7 +42,7 @@
       "Gained practical experience in Angular CLI, TypeScript, and modular design principles. "
     ],
     "image_url": "assets/experience/pathline.png",
-    "data": "4-2025",
+    "date": "2025-04-01",
     "link": "https://drive.google.com/file/d/1NBttaQYKrq72_VRF1NL0gda7TrZ1SSEX/view?usp=drivesdk"
   },
   {
@@ -54,7 +54,7 @@
       "Explored advanced topics such as state management, lazy loading, and performance optimization."
     ],
     "image_url": "assets/experience/Angular-cert.jpg",
-    "data": "23-4-2025",
+    "date": "2025-04-23",
     "link": "https://drive.google.com/file/d/1pJYG4FEuGndaelFo0MOjy-0dNnsigdFf/view?usp=drive_link"
   },
   {
@@ -66,7 +66,7 @@
       "Validated skills in building efficient, scalable, and maintainable Angular applications."
     ],
     "image_url": "assets/experience/hacker-cert2.png",
-    "data": "4-5-2025",
+    "date": "2025-05-04",
     "link": "https://www.hackerrank.com/certificates/iframe/62f36a6856e7"
   }
 ]
