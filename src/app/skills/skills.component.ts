@@ -44,6 +44,9 @@ export class SkillsComponent implements OnInit {
     { icon: 'icon-typescript', name: 'TypeScript' },
     { icon: 'icon-angular', name: 'Angular' },
     { icon: 'icon-bootstrap', name: 'BootStrap' },
+    { icon: 'icon-sass', name: 'Sass' },
+    // { icon: 'icon-node-dot-js', name: 'Node.Js' },
+    // { icon: 'icon-mongodb', name: 'Mongo DB' },
     { icon: 'icon-rxjs', name: 'RxJS' },
     { icon: 'icon-figma', name: 'Figma' },
     { icon: 'icon-github', name: 'GitHub' },
@@ -52,7 +55,7 @@ export class SkillsComponent implements OnInit {
     { icon: 'icon-java', name: 'Java' },
     { icon: 'icon-cplusplus', name: 'C++' },
     { icon: 'icon-csharp', name: 'C#' },
-    { icon: 'icon-dot-net', name: '.Net' },
+    // { icon: 'icon-dot-net', name: '.Net' },
     { icon: 'icon-dart', name: 'Dart' },
     { icon: 'icon-flutter', name: 'Flutter' },
     { icon: 'icon-firebase', name: 'FireBase' },
@@ -60,5 +63,6 @@ export class SkillsComponent implements OnInit {
     { icon: 'icon-tensorflow', name: 'TensorFlow' },
     { icon: 'icon-keras', name: 'keras' },
     { icon: 'icon-microsoftoffice', name: 'Microsoft Office' },
+    // { icon: 'icon-linux', name: 'Linux' },
   ];
 }

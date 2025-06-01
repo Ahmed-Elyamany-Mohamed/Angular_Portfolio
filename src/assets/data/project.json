@@ -12,14 +12,16 @@
       "GitHub",
       "Git"
     ],
-    "demo": ""
+    "demo": "",
+    "date": ""
   },
   {
     "title": "Mobile Application - DUAT",
     "description": "Developed a mobile application using Flutter that assists tourists in exploring Egypt,\nIntegrated AI and third-party APIs functionalities to personalize travel recommendations, significantly\nenhancing user engagement and providing real-time information",
     "image_url": "assets/projects/daut.jpg",
     "tech": ["Flutter", "Dart", "Firebase", "Google Maps", "Api", "Ai", "ML"],
-    "demo": ""
+    "demo": "",
+    "date": ""
   },
   {
     "title": " 3D Skull Landmark Detection Using DICOM Files",
@@ -34,7 +36,8 @@
       "Skimage",
       "ML"
     ],
-    "demo": ""
+    "demo": "",
+    "date": ""
   },
   {
     "title": "Web Application - Gazar Foods",
@@ -49,6 +52,7 @@
       "TypeScript",
       "RxJs"
     ],
-    "demo": ""
+    "demo": "",
+    "date": ""
   }
 ]

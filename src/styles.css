@@ -22,30 +22,51 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body.dark-mode .animated-text {
-  color: rgb(173, 16, 235);
-  display: inline-block;
-  min-width: 180px;
+
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #4b5563;
+  --color-accent: #530dc4;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Backgrounds */
+  --color-bg-light: #f5f5f5;
+  --color-bg-dark: #030712;
+  --color-bg-gray: rgba(128, 128, 128, 0.251);
+  --color-bg-section: rgba(30, 42, 92, 0.732);
+  --color-bg-hover-dark: #11162430;
+  --color-bg-hover-light: #ebe8e8f3;
+
+  /* Text Colors */
+  --color-text-light: #d1d5db;
+  --color-text-dark: #15101c;
+  --color-placeholder-dark: #ffffff63;
+  --color-disabled-dark: #8c97a2;
+
+  /* Gradient Colors */
+  --color-gradient-light: linear-gradient(90deg, #ffffff, #0d0d0d, #ffffff);
+  --color-gradient-dark: linear-gradient(90deg, #0d0d0d, #ffffff, #0d0d0d);
+
+  /* Dark Mode Effects */
+  --color-shadow-light: rgba(234, 233, 233, 0.05);
+  --color-shadow-dark: rgba(103, 102, 102, 0.4);
 }
-.animated-text {
-  color: rgb(110, 6, 152);
-  display: inline-block;
-  min-width: 180px;
-}
+/*! start costum icons */
 .icon-rxjs:before {
-  content: "\e916";
+  content: "\e91a";
   color: #b21aa0;
 }
 .icon-angular:before {
-  content: "\e900";
+  content: "\e902";
   color: #dd0031;
 }
 .icon-bootstrap:before {
   content: "\e901";
-  color: #5e3a94;
+  color: #563d7c;
 }
 .icon-cplusplus:before {
-  content: "\e903";
+  content: "\e916";
   color: #00599c;
 }
 .icon-css3:before {
@@ -57,7 +78,7 @@ body.dark-mode .animated-text {
   color: #0175c2;
 }
 .icon-docker:before {
-  content: "\e902";
+  content: "\e903";
   color: #1488c6;
 }
 .icon-figma:before {
@@ -108,6 +129,14 @@ body.dark-mode .animated-text {
   content: "\e91b";
   color: #e74025;
 }
+.icon-mongodb:before {
+  content: "\e911";
+  color: #47a248;
+}
+.icon-node-dot-js:before {
+  content: "\e915";
+  color: #393;
+}
 .icon-npm:before {
   content: "\e914";
   color: #cb3837;
@@ -136,9 +165,18 @@ body.dark-mode .animated-text {
   content: "\e91c";
   color: #5c2d91;
 }
+.icon-linux:before {
+  content: "\e91d";
+  color: #fcc624;
+}
+.icon-sass:before {
+  content: "\e900";
+  color: #c69;
+}
 .icon-chain-broken:before {
   content: "\f127";
 }
+/*! end costum icons */
 body {
   overflow-x: hidden;
   transition: 0.4s linear;
@@ -146,6 +184,17 @@ body {
 html {
   font-size: 10px;
   font-family: Inter;
+  scroll-behavior: smooth;
+}
+body.dark-mode .animated-text {
+  color: rgb(173, 16, 235);
+  display: inline-block;
+  min-width: 180px;
+}
+.animated-text {
+  color: rgb(110, 6, 152);
+  display: inline-block;
+  min-width: 180px;
 }
 .title-sec {
   font-size: 1.8rem;
@@ -157,9 +206,9 @@ html {
   width: 100%;
   margin: 0 auto;
 }
-.section {
+/* .section {
   background-color: rgba(30, 42, 92, 0.732) !important;
-}
+} */
 header {
   position: sticky;
   top: 0;
@@ -181,7 +230,8 @@ header {
   border: none;
 }
 /* ! works with dark */
-.body.dark-mode .intro h2 {
+/* ? this for text animation */
+/* .body.dark-mode .intro h2 {
   background: linear-gradient(90deg, #0d0d0d, #fff, #0d0d0d);
   background-size: 80%;
   background-repeat: no-repeat;
@@ -196,15 +246,16 @@ header {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: sombra 4.5s linear infinite alternate;
-}
-@keyframes sombra {
+} */
+/* @keyframes sombra {
   0% {
     background-position: 300%;
   }
   100% {
     background-position: -300%;
   }
-}
+} */
+
 .pro-tech span {
   padding: 0.4rem 2rem;
   font-size: 1.4rem;
@@ -347,6 +398,14 @@ body.dark-mode .exp-title a {
   text-decoration: none;
   font-size: 15px;
   color: whitesmoke !important;
+}
+
+body.dark-mode .btn-sort button {
+  background-color: #55535325;
+}
+body.dark-mode .btn-sort button:hover {
+  background-color: #ebe8e8f3;
+  color: black !important;
 }
 
 body.dark-mode .exp-title .btn {
@@ -689,9 +748,6 @@ body.dark-mode .sec-btn {
     margin-top: -5.5rem;
     margin-left: -17rem;
   }
-  html {
-    font-family: Inter;
-  }
   body {
     background-color: #f5f5f5;
   }
@@ -892,6 +948,25 @@ body.dark-mode .sec-btn {
     flex-direction: row;
     align-content: center;
     justify-content: center;
+  }
+  /** sorting btn */
+  .btn-sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .btn-sort button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 1.2rem;
+    color: #4b5563;
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 315px;
+    top: 105px;
   }
   .exp-card {
     width: 89.6rem;
@@ -1281,6 +1356,19 @@ body.dark-mode .sec-btn {
     align-content: center;
     justify-content: center;
   }
+  /** sorting btn */
+  .btn-sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-sort button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
+    color: #4b5563;
+  }
   .exp-card {
     width: 89.6rem;
     height: fit-content;
@@ -1462,9 +1550,6 @@ body.dark-mode .sec-btn {
   .container {
     min-width: 80% !important;
     margin: 0 auto;
-  }
-  html {
-    scroll-behavior: smooth;
   }
   body {
     background-color: #f5f5f5;
@@ -1691,6 +1776,19 @@ body.dark-mode .sec-btn {
     flex-direction: column;
     align-content: center;
     justify-content: center;
+  }
+  /** sorting btn */
+  .btn-sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-sort button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
+    color: #4b5563;
   }
   .exp-card {
     width: 89.6rem;

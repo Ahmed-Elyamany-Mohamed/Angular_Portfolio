@@ -1,4 +1,4 @@
-<section class="experience" data-aos="fade-up" id="experience">
+<section class="experience" e-aos="fade-up" id="experience">
   <span class="sec-btn" style="align-self: center; margin-top: 2rem"
     >Experience</span
   >
@@ -8,20 +8,25 @@
     <p>Here is a quick summary of my most recent experiences:</p>
   </div>
 
+  <div class="btn-sort">
+    <button class="btn btn-outline-dark mb-4" (click)="toggleSort()">
+      Sort : {{ currentSort === "latest" ? "Oldest" : "Latest" }}
+    </button>
+  </div>
   <div
     class="exp-card"
     data-aos="fade-left"
     data-aos-duration="1300"
-    *ngFor="let exp of experience; let i = index"
-    [class.not-first]="i !== 0"
-    [class.first-card]="i === 0"
+    *ngFor="let exp of sortedExperience; let i = index"
+    [class.not-first]="exp?.title !== highlightedTitle"
+    [class.first-card]="exp?.title === highlightedTitle"
   >
     <div class="card-content">
       <div class="exp-img">
         <img [src]="exp.image_url" alt="next" loading="lazy" />
       </div>
       <div class="date">
-        <p>{{ exp.data }}</p>
+        <p>{{ exp.date }}</p>
       </div>
       <div class="exp-title">
         <h2>{{ exp.title }}</h2>

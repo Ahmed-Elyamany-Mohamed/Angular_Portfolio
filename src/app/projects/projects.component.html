@@ -44,8 +44,11 @@
     <p>Some of the noteworthy projects I have built:</p>
   </div>
 
+  <!-- <button class="btn btn-primary mt-5" (click)="toggleSort()">
+    Sort: {{ currentSort === "latest" ? "Latest" : "Oldest" }}
+  </button> -->
   <div
-    *ngFor="let project of projects"
+    *ngFor="let project of sortedProjects"
     class="pro-card"
     data-aos="fade-right"
     data-aos-duration="1300"

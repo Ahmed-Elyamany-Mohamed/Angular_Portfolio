@@ -1,12 +1,14 @@
 import {
   Component,
   ElementRef,
+  input,
   OnInit,
   QueryList,
   ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common'; // ✅ Required for async pipe
 import { ProjectService } from '../services/project.service';
+import { SortingService } from '../services/sorting.service';
 
 @Component({
   selector: 'app-projects',
@@ -17,17 +19,28 @@ import { ProjectService } from '../services/project.service';
 })
 export class ProjectsComponent implements OnInit {
   projects: any[] = [];
+  sortedProjects: any[] = [];
   animated = false;
 
+  currentSort: 'latest' | 'oldest' = 'latest';
   @ViewChildren('projectCard') projectCards!: QueryList<ElementRef>;
 
-  constructor(private projectService: ProjectService) {}
+  constructor(
+    private projectService: ProjectService,
+    private sorting: SortingService
+  ) {}
 
   ngOnInit(): void {
     this.projectService.getProjects().subscribe((data) => {
       this.projects = data;
+      this.sortedProjects = this.sorting.sort(this.projects, this.currentSort); // initialize
     });
   }
+
+  // toggleSort() {
+  //   this.currentSort = this.currentSort === 'latest' ? 'oldest' : 'latest';
+  //   this.sortedProjects = this.sorting.sort(this.projects, this.currentSort);
+  // }
 
   // selectedProjectIndex: number | null = null;
 

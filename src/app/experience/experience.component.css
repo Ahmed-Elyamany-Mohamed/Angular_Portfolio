@@ -11,7 +11,6 @@
 .exp-title .btn {
   position: relative;
   right: -100%;
-
   width: fit-content;
   display: flex;
   align-items: center;
@@ -27,6 +26,14 @@
 .exp-title .btn:hover a {
   color: white;
 }
+/* .btn-sort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 15px;
+} */
 @keyframes bounce {
   0%,
   100% {
